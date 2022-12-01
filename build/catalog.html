@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +8,6 @@
   <title></title>
 </head>
 <body class="page-body">
-
 <header class="page-header">
 
     <div class="page-header-wrapper">
@@ -28,11 +27,11 @@
             <li class="page-header__list-item">
               <a class="page-header__link--form" href="../index.html">Главная</a>
             </li>
-            <li class="page-header__list-item">
+            <li class="page-header__list-item page-header__link--form--active ">
               <a class="page-header__link--form" href="../catalog.html">Каталог продукции</a>
             </li>
             <li class="page-header__list-item">
-              <a class="page-header__link--form page-header__link--form--active " href="../form.html">Подбор программы</a>
+              <a class="page-header__link--form" href="../form.html">Подбор программы</a>
             </li>
 
           </ul>
@@ -41,167 +40,193 @@
     </div>
   </header>
 
+  <main class="catalog-main">
+    <h1 class="catalog__title">Каталог продукции</h1>
 
-  <main class="page-main">
+    <section class="catalog__list">
 
-    <section class="form">
+      <div class="catalog-wrapper">
 
-          <h1 class="form__title">Подбор программы</h1>
-          <p class="form__subtitle">Заполните анкету, и мы подберем <br>
-          программу питания для вашего кота</p>
+        <div class="catalog__list-container">
 
-          <form action="https://echo.htmlacademy.ru">
+          <div class="catalog__card1">
 
-          <fieldset class="form__section">
-
-            <legend><h2 class="visually-hidden">Данные кота и цель программы</h2></legend>
-
-            <div class="form-wrapper">
-
-                <div class="form__options">
-
-                  <label class="form__field" for="name">
-                    <span class="form__options-title">Имя:<sup>*</sup></span>
-                    <input class="form__options-input" type="text" id="name" name="name" placeholder="Барсик">
-                  </label>
-                  <label class="form__field" for="weight">
-                    <span class="form__options-title">Вес (кг):<sup>*</sup></span>
-                    <input class="weight form__options-input" type="text" id="weight" name="weight" min="0" step="0.5" placeholder="7">
-                  </label>
-                  <label class="form__field" for="age">
-                    <span class="form__options-title">Возраст (лет):</span>
-                    <input class="age form__options-input" type="text" id="age" name="age" min="0" step="0.5" placeholder="7">
-                  </label>
-
-                </div>
-
-              <ul class="form__achievement">
-
-                <li class="form__achievement-type">
-
-                  <label for="loss-weight">
-                  <input class="form__radio" type="radio" id="loss-weight" name="achievement-type" value="lost-wieight" hidden>
-                  <span class="form__radio-mark"></span>
-                  <span class="form__radio-title">Похудение</span>
-                </label>
-
-                </li>
-
-                <li class="form__achievement-type">
-
-                  <label for="gain-weight">
-                    <input class="form__radio" type="radio" id="gain-weight" name="achievement-type" value="gain-weight" hidden>
-                    <span class="form__radio-mark"></span>
-                    <span class="form__radio-title">Набор массы</span>
-                  </label>
-
-                </li>
-
-                <li class="form__achievement-type">
-
-                  <label for="not-defined">
-                    <input class="form__radio" type="radio" id="not-defined" name="achievement-type" value="not-defined" hidden>
-                    <span class="form__radio-mark"></span>
-                    <span class="form__radio-title">Не знаю (нужен ваш совет)</span>
-                  </label>
-
-                </li>
-
-              </ul>
-
-            </div>
-
-          </fieldset>
-
-          <fieldset class="form__section">
-
-            <legend class="form__fieldset-legend"><h2 class="form__section-title">Контактные данные (владельца кота)</h2></legend>
-
-            <div class="form-wrapper">
-
-              <div class="form__section-container">
-                <label class="form__section-field" for="email">
-                  <span class="form__options-title">Email:<sup>*</sup></span>
-                  <input class="email form__contacts-input" type="email" id="email" name="email" placeholder="kuklachev@gmail.com">
-                </label>
-
-                <label class="form__section-field" for="telephone">
-                  <span class="form__options-title">Телефон:<sup>*</sup></span>
-                  <input class="telephone form__contacts-input" type="tel" id="telephone" name="telephone" placeholder="8(960) 900-60-90">
-                </label>
+            <div class="catalog__card">
+              <div class="card__image"></div>
+              <div class="card__title">
+                <span>Cat Energy PRO 500 г</span>
               </div>
-
+              <div class="card__mass-option">Масса</div>
+              <div class="card__mass">500 г.</div>
+              <div class="card__test-option">Вкус</div>
+              <div class="card__test">Курица</div>
+              <div class="card__price-option">Цена</div>
+              <div class="card__price">700 Р.</div>
             </div>
 
-          </fieldset>
-
-          <fieldset class="form__section">
-
-            <legend class="form__fieldset-legend"><h2 class="form__section-title">Комментарий</h2></legend>
-
-            <div class="form-wrapper">
-
-              <textarea class="form_textarea"  name="comment" placeholder="Расскажите обо всех повадках кота">Расскажите обо  всех повадках кота</textarea>
-
-            </div>
-
-          </fieldset>
-
-          <fieldset class="form__section">
-
-            <legend class="form__fieldset-legend"><h2 class="form__section-title">Дополнительно</h2></legend>
-
-            <div class="form-wrapper">
-
-              <ul class="form__additional-list">
-
-                <li class="form__additional-item">
-                  <label for="sweetener">
-                    <input class="form__checkbox" type="checkbox" name="sweetener" id="sweetener" hidden>
-                    <span class="form__checkbox-mark"></span>
-                    <span class="form__checkbox-title">Сахарозаменитель</span>
-                  </label>
-                </li>
-
-                <li class="form__additional-item">
-                  <label for="water">
-                    <input class="form__checkbox" type="checkbox" name="water" id="water" hidden>
-                    <span class="form__checkbox-mark"></span>
-                    <span class="form__checkbox-title">Питьевая вода</span>
-                  </label>
-                </li>
-
-                <li class="form__additional-item">
-                  <label for="milk">
-                    <input class="form__checkbox" type="checkbox" name="milk" id="milk" hidden>
-                    <span class="form__checkbox-mark"></span>
-                    <span class="form__checkbox-title">Молоко</span>
-                  </label>
-                </li>
-
-                <li class="form__additional-item">
-                    <label for="vitamines">
-                    s
-                    </label>
-                </li>
-
-              </ul>
-
-            </div>
-
-          </fieldset>
-
-          <div class="form__button-container">
-            <button class="form__button" type="submit">Отправить заявку</button>
-            <small class="form__warning"><sup>*</sup>&ndash; Обязательные поля</small>
           </div>
 
-        </form>
+          <div class="catalog__card2">
 
+            <div class="catalog__card">
+              <div class="card__image"></div>
+              <div class="card__title">Cat Energy PRO 1000 г</div>
+              <div class="card__mass-option">Масса</div>
+              <div class="card__mass">1000 г.</div>
+              <div class="card__test-option">Вкус</div>
+              <div class="card__test">Курица</div>
+              <div class="card__price-option">Цена</div>
+              <div class="card__price">1000 Р.</div>
+            </div>
+
+          </div>
+
+          <div class="catalog-card3">
+
+            <div class="catalog__card">
+              <div class="card__image"></div>
+              <div class="card__title">Cat Energy PRO 500 г</div>
+              <div class="card__mass-option">Масса</div>
+              <div class="card__mass">500 г.</div>
+              <div class="card__test-option">Вкус</div>
+              <div class="card__test">Рыба</div>
+              <div class="card__price-option">Цена</div>
+              <div class="card__price">700 Р.</div>
+            </div>
+
+          </div>
+
+          <div class="catalog__card4">
+
+            <div class="catalog__card">
+              <div class="card__image"></div>
+              <div class="card__title">Cat Energy PRO 1000 г</div>
+              <div class="card__mass-option">Масса</div>
+              <div class="card__mass">1000 г.</div>
+              <div class="card__test-option">Вкус</div>
+              <div class="card__test">Рыба</div>
+              <div class="card__price-option">Цена</div>
+              <div class="card__price">1000 Р.</div>
+            </div>
+
+          </div>
+
+          <div class="catalog__card5">
+
+            <div class="catalog__card">
+              <div class="card__image"></div>
+              <div class="card__title">Cat Energy slim 500 г</div>
+              <div class="card__mass-option">Масса</div>
+              <div class="card__mass">500 г.</div>
+              <div class="card__test-option">Вкус</div>
+              <div class="card__test">Гречка</div>
+              <div class="card__price-option">Цена</div>
+              <div class="card__price">400 Р.</div>
+            </div>
+
+          </div>
+
+          <div class="catalog__card6">
+
+            <div class="catalog__card">
+              <div class="card__image"></div>
+              <div class="card__title">Cat Energy slim 1000 г</div>
+              <div class="card__mass-option">Масса</div>
+              <div class="card__mass">1000 г.</div>
+              <div class="card__test-option">Вкус</div>
+              <div class="card__test">Гречка</div>
+              <div class="card__price-option">Цена</div>
+              <div class="card__price">700 Р.</div>
+              <div class="card__button"></div>
+            </div>
+
+          </div>
+
+          <div class="catalog__card7">
+
+            <div class="catalog__card">
+              <div class="card__image"></div>
+              <div class="card__title">Cat Energy slim 500 г</div>
+              <div class="card__mass-option">Масса</div>
+              <div class="card__mass">500 г.</div>
+              <div class="card__test-option">Рис</div>
+              <div class="card__test">Гречка</div>
+              <div class="card__price-option">Цена</div>
+              <div class="card__price">700 Р.</div>
+              <div class="card__button"></div>
+            </div>
+
+          </div>
+
+          <div class="catalog__card8">
+
+            <div class="catalog__card">
+           <div class="card__image"></div>
+              <div class="card__title">Cat Energy slim 500 г</div>
+              <div class="card__mass-option">Масса</div>
+              <div class="card__mass">500 г.</div>
+              <div class="card__test-option">Рис</div>
+              <div class="card__test">Гречка</div>
+              <div class="card__price-option">Цена</div>
+              <div class="card__price">700 Р.</div>
+              <div class="card__button"></div>
+            </div>
+
+          </div>
+
+        </div>
+        <!-- catalog__list-container -->
+      </div>
+      <!-- catalog-wrapper -->
     </section>
 
-   <section class="contacts">
-
+    <section class="catalog__extragoods">
+        <form class="catalog__extragoods-form">
+          <fieldset class="catalog__extragoods-fieldset">
+            <legend class="catalog__extragoods-legend">
+              <h2 class="catalog__section-title">Дополнительные товары</h2>
+            </legend>
+            <div class="catalog-wrapper">
+              <ul class="catalog__extragoods-list">
+                <li class="catalog__extragoods-item">
+                  <span class="catalog__extragoods-title">Сахарозаменитель</span>
+                  <span class="catalog__extragoods-volume">1 упаковка (100г)</span>
+                  <span class="catalog__extragoods-price">200 Р.</span>
+                  <button class="catalog__extragoods-button" type="submit">Заказать</button>
+                </li>
+                <li class="catalog__extragoods-item">
+                  <span class="catalog__extragoods-title">Питьевая вода</span>
+                  <span class="catalog__extragoods-volume">5 литров</span>
+                  <span class="catalog__extragoods-price">50 Р.</span>
+                  <button class="catalog__extragoods-button" type="submit">Заказать</button>
+                </li>
+                <li class="catalog__extragoods-item">
+                  <span class="catalog__extragoods-title">Молоко</span>
+                  <span class="catalog__extragoods-volume">1 литр</span>
+                  <span class="catalog__extragoods-price">100 Р.</span>
+                  <button class="catalog__extragoods-button" type="submit">Заказать</button>
+                </li>
+                <li class="catalog__extragoods-item">
+                  <span class="catalog__extragoods-title">Витамины</span>
+                  <span class="catalog__extragoods-volume">1 упаковка (30г)</span>
+                  <span class="catalog__extragoods-price">300 Р.</span>
+                  <button class="catalog__extragoods-button" type="submit">Заказать</button>
+                </li>
+              </ul>
+              <div class="catalog__extragoods-gift">
+                <div class="catalog__extragoods-gift-overlay">
+                  <a class="catalog__gift-link" href="#">
+                    <span class="catalog__gift-text">Закажите все <br> и получите чехол для <br> кота в подарок!</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+          <!-- catalog__extragoods-form -->
+      </div>
+    </section>
+    <section class="contacts">
       <h2 class="visually-hidden">Как с нами связаться</h2>
 
       <div class="contacts__box">
@@ -214,11 +239,8 @@
         <p>Санкт-Петербург</p></address>
 
       </div>
-
     </section>
-
   </main>
-
 <footer class="page-footer">
 
     <div class="page-footer-wrapper">

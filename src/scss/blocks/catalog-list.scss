@@ -1,0 +1,279 @@
+.catalog-main {
+  background-color: #ffffff;
+}
+
+.catalog__title {
+  margin-left: 110px;
+
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 60px;
+
+  color: #000000;
+}
+
+.catalog-wrapper {
+  @include margin-wrapper ();
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.catalog__list-container {
+  display: grid;
+  grid-template-columns: 245px 245px 245px 245px;
+  grid-template-rows: min-content min-content;
+  gap: 30px 60px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "catalog__card1 catalog__card2 catalog-card3 catalog__card4"
+    "catalog__card5 catalog__card6 catalog__card7 catalog__card8";
+}
+
+.catalog__card1 {
+  grid-area: catalog__card1;
+}
+
+.catalog__card2 {
+  grid-area: catalog__card2;
+}
+
+.catalog-card3 {
+  grid-area: catalog-card3;
+}
+
+.catalog__card4 {
+  grid-area: catalog__card4;
+}
+
+.catalog__card5 {
+  grid-area: catalog__card5;
+}
+
+.catalog__card6 {
+  grid-area: catalog__card6;
+}
+
+.catalog__card7 {
+  grid-area: catalog__card7;
+}
+
+.catalog__card8 {
+  grid-area: catalog__card8;
+}
+
+
+.catalog__card {
+  display: grid;
+  grid-template-columns: 40px 1fr 1fr 40px;
+  grid-template-rows: 4fr 2fr 1fr 1fr 1fr 40px;
+  gap: 0 0;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". card__image card__image ."
+    ". card__title card__title ."
+    ". card__mass-option card__mass ."
+    ". card__test-option card__test ."
+    ". card__price-option card__price ."
+    ". card__button card__button ."
+    ". . . .";
+}
+
+.card__image {
+  grid-area: card__image;
+}
+
+.card__title {
+  grid-area: card__title;
+}
+
+.card__mass-option {
+  grid-area: card__mass-option;
+}
+
+.card__mass {
+  grid-area: card__mass;
+}
+
+.card__test-option {
+  grid-area: card__test-option;
+}
+
+.card__test {
+  grid-area: card__test;
+}
+
+.card__price-option {
+  grid-area: card__price-option;
+}
+
+.card__price {
+  grid-area: card__price;
+}
+
+.card__button {
+  grid-area: card__button;
+}
+
+.catalog__extragoods-form {
+  display: flex;
+  width: 100%;
+}
+
+.catalog__extragoods-fieldset {
+  display: flex;
+  width: 100%;
+  border: none;
+  border-top: 2px solid #68b738;
+}
+
+.catalog__extragoods-legend {
+  margin-left: 100px;
+}
+
+.catalog__section-title {
+  margin: 0;
+  width: 100%;
+}
+
+.catalog__extragoods-list {
+  @include set-list();
+  display: flex;
+  flex-direction: column;
+  margin: 80px 0;
+  width: 800px;
+}
+
+.catalog__extragoods-item {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 15px 0;
+  box-sizing: border-box;
+
+  border-top: 1px solid #cdcdcd;
+
+  &:last-child {
+    border-bottom: 1px solid #cdcdcd;
+  }
+}
+
+.catalog__extragoods-title {
+  width: 25%;
+
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+
+  color: #222222;
+}
+
+.catalog__extragoods-volume {
+  transform: translateX(120px);
+  width: 25%;
+
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+
+  color: #444444;
+}
+
+.catalog__extragoods-price {
+  transform: translateX(120px);
+  width: 25%;
+
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+
+  color: #444444;
+}
+
+.catalog__extragoods-button {
+  width: 32%;
+  height: 40px;
+  border: none;
+
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: #68b738;
+  color: #ffffff;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.catalog__extragoods-gift {
+  position: relative;
+  width: 245px;
+  height: 290px;
+  margin-top: 80px;
+  margin-left: 80px;
+
+  background: url("../../files/img/catalog-gift.jpg") no-repeat;
+  background-size: 100%;
+
+  .catalog__extragoods-gift-overlay {
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    background-color: #68b738;
+    background-image: url("../../files/img/icons/icon_gift.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 30%;
+    opacity: 0.85;
+
+    &:hover {
+      background-color: #5eaa2f;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  .catalog__gift-link {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+    font-family: "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration: none;
+
+    color: #ffffff;
+  }
+
+  .catalog__gift-text {
+    transform: translateY(200px);
+  }
+}
+
