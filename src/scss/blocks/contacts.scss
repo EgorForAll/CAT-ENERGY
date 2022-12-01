@@ -1,0 +1,45 @@
+.contacts {
+  width: 100%;
+  min-height: 375px;
+  background: url("../../files/img/Map.png") no-repeat;
+  background-size: 100%;
+  background-position: 100%;
+  z-index: 1;
+}
+
+.contacts__title {
+  margin: 0;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+
+  text-transform: uppercase;
+
+  color: #111111;
+}
+
+.contacts__box {
+  position: absolute;
+
+  @include set-size(565px, 200px);
+  display: flex;
+  margin-top: 95px;
+  margin-left: 100px;
+  background-color: #ffffff;
+  z-index: 2;
+}
+
+.contacts__adress {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}

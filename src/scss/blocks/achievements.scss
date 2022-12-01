@@ -1,0 +1,146 @@
+.achievements-wrapper {
+  @include margin-wrapper();
+  display: flex;
+  justify-content: space-between;
+  margin-top: 82px;
+}
+
+.achievements__list {
+  @include set-list();
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.achievements__list-item {
+  width: 560px;
+  min-height: 374px;
+  box-sizing: border-box;
+
+  background-color: #f2f2f2;
+  z-index: 1;
+}
+
+.achievements__list-title {
+  position: relative;
+  display: flex;
+  min-height: 106px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding-left: 120px;
+
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  text-transform: uppercase;
+  text-align: center;
+
+  color: #000000;
+}
+
+.achievements__list-title::before {
+  position: absolute;
+  left: 50px;
+
+  @include set-size(100px, 100px);
+  content: " ";
+  border-radius: 50%;
+  background-color: #68b738;
+  z-index: 2;
+}
+
+.achievements__list-item:first-child .achievements__list-title::after {
+  position: absolute;
+  top: 0;
+  left: 67px;
+
+  @include set-size(70px, 90px);
+
+  content: "";
+  background: url("../../files/img/cat-label.svg") no-repeat;
+  background-size: 100%;
+  z-index: 2;
+}
+
+.achievements__list-item:nth-child(2) .achievements__list-title::after {
+  position: absolute;
+  top: 25;
+  left: 31px;
+
+  @include set-size(134px, 56px);
+
+  content: "";
+  background: url("../../files/img/tiger-label.svg") no-repeat;
+  background-size: 100%;
+  z-index: 2;
+}
+
+.achievements__list-desc {
+  margin-left: 50px;
+  margin-right: 50px;
+
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.achievements__list-link {
+  position: relative;
+
+  margin-top: 30px;
+  margin-left: 50px;
+  margin-right: 50px;
+
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  color: #000000;
+
+  &::after {
+    position: absolute;
+    top: 20%;
+    right: -48px;
+
+    @include set-size(32px, 10px);
+
+    content: "";
+
+    background: url("../../files/img/arrow-link.png") no-repeat;
+    background-size: 100%;
+    z-index: 3;
+  }
+
+  &:hover {
+    &::after {
+      position: absolute;
+      top: 20%;
+      right: -48px;
+
+      @include set-size(32px, 10px);
+
+      content: "";
+
+      background: url("../../files/img/arrow-link-hover.svg") no-repeat;
+      background-size: 100%;
+      z-index: 3;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+

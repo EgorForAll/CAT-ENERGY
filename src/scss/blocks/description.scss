@@ -1,0 +1,131 @@
+.description-wrapper {
+  @include margin-wrapper ();
+}
+
+.description__title {
+  margin-top: 70px;
+  margin-bottom: 70px;
+
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 60px;
+}
+
+.description__list {
+  @include set-list ();
+  justify-content: space-between;
+}
+
+.description-list__item {
+  position: relative;
+
+  @include set-size (240px, 280px);
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+
+  color: #444444;
+
+  &:nth-child(1) {
+    background: url("../../files/img/1.svg") no-repeat;
+    background-size: 134px 280px;
+    background-position: 100% 0;
+
+    &::after {
+      position: absolute;
+      z-index: 3;
+      top: 16%;
+      left: 12%;
+
+      @include set-size(30px, 30px);
+      content: "";
+      background: url("../../files/img/icon_leaf.svg");
+      background-size: 100%;
+    }
+  }
+
+  &:nth-child(2) {
+    background: url("../../files/img/2.svg") no-repeat;
+    background-size: 134px 280px;
+    background-position: 100% 0;
+
+    &::after {
+      position: absolute;
+      z-index: 3;
+      top: 16%;
+      left: 11%;
+
+      @include set-size(30px, 30px);
+      content: "";
+      background: url("../../files/img/icon_tub.svg");
+      background-size: 100%;
+    }
+  }
+
+  &:nth-child(3) {
+    background: url("../../files/img/3.svg") no-repeat;
+    background-size: 134px 280px;
+    background-position: 100% 0;
+
+    &::after {
+      position: absolute;
+      z-index: 3;
+      top: 16%;
+      left: 11%;
+
+      @include set-size(30px, 30px);
+      content: "";
+      background: url("../../files/img/icon_eat.svg");
+      background-size: 100%;
+    }
+  }
+
+  &:nth-child(4) {
+    background: url("../../files/img/4.svg") no-repeat;
+    background-size: 134px 280px;
+    background-position: 100% 0;
+
+    &::after {
+      position: absolute;
+      z-index: 3;
+      top: 16%;
+      left: 11%;
+
+      @include set-size(30px, 30px);
+      content: "";
+      background: url("../../files/img/icon_alarm.svg");
+      background-size: 100%;
+    }
+  }
+}
+
+.description-list__item::before {
+  position: absolute;
+  left: 0;
+  top: 22px;
+
+  @include set-size(80px, 80px);
+
+  content: "";
+  background-color: #68b738;
+}
+
+.description__list-text {
+  margin-top: 150px;
+
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+
+  color: #444444;
+}

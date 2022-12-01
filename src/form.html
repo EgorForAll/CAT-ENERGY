@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+@@include('html/head.html',{"title": "Подбор программы"})
+<body class="page-body">
+
+@@include('html/header-form.html', {})
+
+  <main class="page-main">
+
+    <section class="form">
+
+          <h1 class="form__title">Подбор программы</h1>
+          <p class="form__subtitle">Заполните анкету, и мы подберем <br>
+          программу питания для вашего кота</p>
+
+          <form action="https://echo.htmlacademy.ru">
+
+          <fieldset class="form__section">
+
+            <legend><h2 class="visually-hidden">Данные кота и цель программы</h2></legend>
+
+            <div class="form-wrapper">
+
+                <div class="form__options">
+
+                  <label class="form__field" for="name">
+                    <span class="form__options-title">Имя:<sup>*</sup></span>
+                    <input class="form__options-input" type="text" id="name" name="name" placeholder="Барсик">
+                  </label>
+                  <label class="form__field" for="weight">
+                    <span class="form__options-title">Вес (кг):<sup>*</sup></span>
+                    <input class="weight form__options-input" type="text" id="weight" name="weight" min="0" step="0.5" placeholder="7">
+                  </label>
+                  <label class="form__field" for="age">
+                    <span class="form__options-title">Возраст (лет):</span>
+                    <input class="age form__options-input" type="text" id="age" name="age" min="0" step="0.5" placeholder="7">
+                  </label>
+
+                </div>
+
+              <ul class="form__achievement">
+
+                <li class="form__achievement-type">
+
+                  <label for="loss-weight">
+                  <input class="form__radio" type="radio" id="loss-weight" name="achievement-type" value="lost-wieight" hidden>
+                  <span class="form__radio-mark"></span>
+                  <span class="form__radio-title">Похудение</span>
+                </label>
+
+                </li>
+
+                <li class="form__achievement-type">
+
+                  <label for="gain-weight">
+                    <input class="form__radio" type="radio" id="gain-weight" name="achievement-type" value="gain-weight" hidden>
+                    <span class="form__radio-mark"></span>
+                    <span class="form__radio-title">Набор массы</span>
+                  </label>
+
+                </li>
+
+                <li class="form__achievement-type">
+
+                  <label for="not-defined">
+                    <input class="form__radio" type="radio" id="not-defined" name="achievement-type" value="not-defined" hidden>
+                    <span class="form__radio-mark"></span>
+                    <span class="form__radio-title">Не знаю (нужен ваш совет)</span>
+                  </label>
+
+                </li>
+
+              </ul>
+
+            </div>
+
+          </fieldset>
+
+          <fieldset class="form__section">
+
+            <legend class="form__fieldset-legend"><h2 class="form__section-title">Контактные данные (владельца кота)</h2></legend>
+
+            <div class="form-wrapper">
+
+              <div class="form__section-container">
+                <label class="form__section-field" for="email">
+                  <span class="form__options-title">Email:<sup>*</sup></span>
+                  <input class="email form__contacts-input" type="email" id="email" name="email" placeholder="kuklachev@gmail.com">
+                </label>
+
+                <label class="form__section-field" for="telephone">
+                  <span class="form__options-title">Телефон:<sup>*</sup></span>
+                  <input class="telephone form__contacts-input" type="tel" id="telephone" name="telephone" placeholder="8(960) 900-60-90">
+                </label>
+              </div>
+
+            </div>
+
+          </fieldset>
+
+          <fieldset class="form__section">
+
+            <legend class="form__fieldset-legend"><h2 class="form__section-title">Комментарий</h2></legend>
+
+            <div class="form-wrapper">
+
+              <textarea class="form_textarea"  name="comment" placeholder="Расскажите обо всех повадках кота">Расскажите обо  всех повадках кота</textarea>
+
+            </div>
+
+          </fieldset>
+
+          <fieldset class="form__section">
+
+            <legend class="form__fieldset-legend"><h2 class="form__section-title">Дополнительно</h2></legend>
+
+            <div class="form-wrapper">
+
+              <ul class="form__additional-list">
+
+                <li class="form__additional-item">
+                  <label for="sweetener">
+                    <input class="form__checkbox" type="checkbox" name="sweetener" id="sweetener" hidden>
+                    <span class="form__checkbox-mark"></span>
+                    <span class="form__checkbox-title">Сахарозаменитель</span>
+                  </label>
+                </li>
+
+                <li class="form__additional-item">
+                  <label for="water">
+                    <input class="form__checkbox" type="checkbox" name="water" id="water" hidden>
+                    <span class="form__checkbox-mark"></span>
+                    <span class="form__checkbox-title">Питьевая вода</span>
+                  </label>
+                </li>
+
+                <li class="form__additional-item">
+                  <label for="milk">
+                    <input class="form__checkbox" type="checkbox" name="milk" id="milk" hidden>
+                    <span class="form__checkbox-mark"></span>
+                    <span class="form__checkbox-title">Молоко</span>
+                  </label>
+                </li>
+
+                <li class="form__additional-item">
+                    <label for="vitamines">
+                    s
+                    </label>
+                </li>
+
+              </ul>
+
+            </div>
+
+          </fieldset>
+
+          <div class="form__button-container">
+            <button class="form__button" type="submit">Отправить заявку</button>
+            <small class="form__warning"><sup>*</sup>&ndash; Обязательные поля</small>
+          </div>
+
+        </form>
+
+    </section>
+
+   <section class="contacts">
+
+      <h2 class="visually-hidden">Как с нами связаться</h2>
+
+      <div class="contacts__box">
+
+        <p class="contacts__title">Приглашаем <br>
+        к сотрудничеству <br>
+        дилеров!</p>
+        <address class="contacts__adress"><p>ул. Большая
+        Конюшенная, д. 19/8</p>
+        <p>Санкт-Петербург</p></address>
+
+      </div>
+
+    </section>
+
+  </main>
+
+@@include('html/footer.html', {})
+</body>
+</html>
