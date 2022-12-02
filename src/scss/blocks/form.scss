@@ -51,9 +51,6 @@
 }
 
 .form__field {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
   margin-bottom: 25px;
 }
 
@@ -97,12 +94,16 @@
   }
 }
 
+.name {
+  width: 470px;
+}
+
 .weight {
-  width: 475px;
+  width: 445px;
 }
 
 .age {
-  width: 435px;
+  width: 400px;
 }
 
 .form__achievement {

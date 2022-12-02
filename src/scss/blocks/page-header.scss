@@ -29,7 +29,7 @@
   margin-top: 75px;
 }
 
-.page-header__logo-image{
+.page-header__logo-image {
   &:hover {
     opacity: 0.8;
   }
@@ -49,6 +49,8 @@
 
 .page-header__list {
   @include set-list();
+  flex-wrap: wrap;
+  max-width: 800px;
 }
 
 .page-header__list-item {

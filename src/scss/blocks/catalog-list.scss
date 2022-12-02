@@ -3,7 +3,8 @@
 }
 
 .catalog__title {
-  margin-left: 110px;
+  @include margin-wrapper();
+  margin-top: 80px;
 
   font-family: "Oswald", sans-serif;
   font-style: normal;
@@ -14,107 +15,206 @@
   color: #000000;
 }
 
-.catalog-wrapper {
+.catalog__list-wrapper {
   @include margin-wrapper ();
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-}
-
-.catalog__list-container {
   display: grid;
-  grid-template-columns: 245px 245px 245px 245px;
-  grid-template-rows: min-content min-content;
-  gap: 30px 60px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "catalog__card1 catalog__card2 catalog-card3 catalog__card4"
-    "catalog__card5 catalog__card6 catalog__card7 catalog__card8";
+  grid-template-columns: repeat(4, 250px);
+  column-gap: 50px;
+  row-gap: 40px;
+  margin-bottom: 100px;
+  margin-top: 100px;
 }
 
-.catalog__card1 {
-  grid-area: catalog__card1;
-}
+.catalog__card:last-child {
 
-.catalog__card2 {
-  grid-area: catalog__card2;
-}
+  background-color: #ffffff;
+  border: 2px solid #f2f2f2;
 
-.catalog-card3 {
-  grid-area: catalog-card3;
-}
+  .card__button {
+    color: #444444;
+    background-color: #f2f2f2;
 
-.catalog__card4 {
-  grid-area: catalog__card4;
-}
+    &:hover {
+      background-color: #ebebeb;
+    }
 
-.catalog__card5 {
-  grid-area: catalog__card5;
-}
+    &:active {
+      color: rgba(68, 68, 68, 0.3);
+    }
+  }
 
-.catalog__card6 {
-  grid-area: catalog__card6;
-}
+  .card__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-.catalog__card7 {
-  grid-area: catalog__card7;
-}
+  .card__image::after {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 2px;
+    background-color: #d3d3d3;
+  }
 
-.catalog__card8 {
-  grid-area: catalog__card8;
-}
+  .card__image::before {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 2px;
+    background-color: #d3d3d3;
+    transform: rotate(90deg);
+  }
 
+  .card__test-option {
+    height: 19px;
+    border: none;
+  }
+
+  .card__mass-option {
+    height: 19px;
+    border: none;
+  }
+
+  .card__price-option {
+    height: 19px;
+    border: none;
+  }
+}
 
 .catalog__card {
   display: grid;
-  grid-template-columns: 40px 1fr 1fr 40px;
-  grid-template-rows: 4fr 2fr 1fr 1fr 1fr 40px;
+  margin-top: 100px;
+  grid-template-columns: 40px 170px 40px;
+  grid-template-rows: 170px min-content min-content min-content min-content min-content 60px;
   gap: 0 0;
   grid-auto-flow: row;
   grid-template-areas:
-    ". card__image card__image ."
-    ". card__title card__title ."
-    ". card__mass-option card__mass ."
-    ". card__test-option card__test ."
-    ". card__price-option card__price ."
-    ". card__button card__button ."
-    ". . . .";
+    ". card__image ."
+    ". card__title ."
+    ". card__mass-option ."
+    ". card__test-option ."
+    ". card__price-option ."
+    ". card__button ."
+    ". . .";
+
+  background-color: #f2f2f2;
 }
 
 .card__image {
   grid-area: card__image;
+  display: flex;
+  align-items: flex-end;
+}
+
+.card__image-set {
+  transform: translateY(-40px);
 }
 
 .card__title {
   grid-area: card__title;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 10px;
+
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #222222;
 }
 
 .card__mass-option {
   grid-area: card__mass-option;
-}
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  padding-top: 10px;
 
-.card__mass {
-  grid-area: card__mass;
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+
+  text-align: center;
+
+  color: #444444;
+  border-bottom: 1px solid #cdcdcd;
 }
 
 .card__test-option {
   grid-area: card__test-option;
-}
 
-.card__test {
-  grid-area: card__test;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  padding-top: 10px;
+
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+
+  text-align: center;
+
+  color: #444444;
+  border-bottom: 1px solid #cdcdcd;
 }
 
 .card__price-option {
   grid-area: card__price-option;
-}
+  padding-bottom: 10px;
+  padding-top: 10px;
 
-.card__price {
-  grid-area: card__price;
+  display: flex;
+  justify-content: space-between;
+
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+
+  text-align: center;
+
+  color: #444444;
+  border-bottom: 1px solid #cdcdcd;
 }
 
 .card__button {
   grid-area: card__button;
+  transform: translateY(20px);
+
+  width: 170px;
+  min-height: 40px;
+
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: #68b738;
+  color: #ffffff;
+  border: none;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 .catalog__extragoods-form {
@@ -133,9 +233,20 @@
   margin-left: 100px;
 }
 
+.catalog-wrapper {
+  @include margin-wrapper();
+  display: flex;
+}
+
 .catalog__section-title {
   margin: 0;
   width: 100%;
+
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
 }
 
 .catalog__extragoods-list {
@@ -163,6 +274,7 @@
 
 .catalog__extragoods-title {
   width: 25%;
+  display: block;
 
   font-family: "Oswald", sans-serif;
   font-style: normal;
@@ -175,8 +287,7 @@
 }
 
 .catalog__extragoods-volume {
-  transform: translateX(120px);
-  width: 25%;
+  width: 17%;
 
   font-family: "Arial", sans-serif;
   font-style: normal;
@@ -184,12 +295,12 @@
   font-size: 16px;
   line-height: 20px;
 
+
   color: #444444;
 }
 
 .catalog__extragoods-price {
-  transform: translateX(120px);
-  width: 25%;
+  width: 8%;
 
   font-family: "Arial", sans-serif;
   font-style: normal;
@@ -261,6 +372,7 @@
     width: 100%;
     height: 100%;
     text-align: center;
+    justify-content: flex-end;
 
     font-family: "Arial", sans-serif;
     font-style: normal;
@@ -273,7 +385,7 @@
   }
 
   .catalog__gift-text {
-    transform: translateY(200px);
+    margin-bottom: 20px;
   }
 }
 

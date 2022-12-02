@@ -28,7 +28,8 @@
 .contacts__box {
   position: absolute;
 
-  @include set-size(565px, 200px);
+  width: 565px;
+  min-height: 200px;
   display: flex;
   margin-top: 95px;
   margin-left: 100px;
