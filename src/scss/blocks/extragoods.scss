@@ -1,0 +1,99 @@
+.extragoods__fieldset {
+  border: none;
+  border-top: 2px solid #68b738;
+}
+
+.extragoods__legend {
+  margin-left: 100px;
+}
+
+.extragoods__fieldset-title {
+  margin: 0;
+}
+
+.extragoods__list {
+  @include set-list();
+  display: flex;
+  flex-direction: column;
+  margin: 80px 0;
+  width: 800px;
+}
+
+.extragoods__item {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 15px 0;
+  box-sizing: border-box;
+
+  border-top: 1px solid #cdcdcd;
+
+  &:last-child {
+    border-bottom: 1px solid #cdcdcd;
+  }
+}
+
+.extragoods__title {
+  width: 25%;
+  display: block;
+
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+
+  color: #222222;
+}
+
+.extragoods__volume {
+  width: 17%;
+
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+
+
+  color: #444444;
+}
+
+.extragoods__price {
+  width: 8%;
+
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+
+  color: #444444;
+}
+
+.extragoods__button {
+  width: 32%;
+  height: 40px;
+  border: none;
+
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: #68b738;
+  color: #ffffff;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}

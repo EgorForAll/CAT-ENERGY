@@ -4,9 +4,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.min.css?_v=20221202143117">
-  <title></title>
+  <link rel="stylesheet" href="css/style.min.css?_v=20221206131003">
+  <link rel="icon" href="../files/img/favicon/favicon.ico">
+  <title>Подбор программы</title>
 </head>
+
 <body class="page-body">
 
 <header class="page-header">
@@ -66,11 +68,11 @@
                   </label>
                   <label class="form__field" for="weight">
                     <span class="form__options-title">Вес (кг):<sup>*</sup></span>
-                    <input class="weight form__options-input" type="text" id="weight" name="weight" min="0" step="0.5" placeholder="7">
+                    <input class="weight form__options-input" type="text" id="weight" name="weight"  placeholder="7">
                   </label>
                   <label class="form__field" for="age">
                     <span class="form__options-title">Возраст (лет):</span>
-                    <input class="age form__options-input" type="text" id="age" name="age" min="0" step="0.5" placeholder="7">
+                    <input class="age form__options-input" type="text" id="age" name="age" placeholder="7">
                   </label>
 
                 </div>
@@ -181,7 +183,9 @@
 
                 <li class="form__additional-item">
                     <label for="vitamines">
-                    s
+                    <input class="form__checkbox" type="checkbox" name="milk" id="vitamines" hidden>
+                    <span class="form__checkbox-mark"></span>
+                    <span class="form__checkbox-title">Витамины</span>
                     </label>
                 </li>
 

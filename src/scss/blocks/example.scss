@@ -1,0 +1,22 @@
+.example-wrapper {
+  @include margin-wrapper();
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.example__title {
+  @include margin-wrapper();
+  margin-top: 70px;
+  margin-bottom: 76px;
+
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 60px;
+}
+
+.example__background {
+  background-color: #f2f2f2;
+}
