@@ -1,4 +1,6 @@
-@mixin margin-wrapper($margin-top:0, $margin-bottom:0, $margin-left: 100px, $margin-right: 100px) {
+@import "variables";
+
+@mixin margin-wrapper($margin-top:0, $margin-bottom:0, $margin-left: 20px, $margin-right: 20px) {
   margin-top: $margin-top;
   margin-left: $margin-left;
   margin-bottom: $margin-bottom;
@@ -17,26 +19,15 @@
   height: $height;
 }
 
-.page-header {
-  z-index: 3;
-}
 
-.page-header-wrapper {
-  @include margin-wrapper();
+.page-header {
+  width: 100%;
+  margin: 20px auto;
+  padding: 0 30px;
   display: flex;
   justify-content: space-between;
+  box-sizing: border-box;
   align-items: center;
-  margin-top: 75px;
-}
-
-.page-header__logo-image {
-  &:hover {
-    opacity: 0.8;
-  }
-
-  &:active {
-    opacity: 0.6;
-  }
 }
 
 .page-header__main-nav {
@@ -44,13 +35,18 @@
 }
 
 .page-header__toggle {
-  display: none;
+  @include set-size(24px, 20px);
+  border: none;
+  background: url("../../files/img/icons/burger.svg") no-repeat;
+  background-size: 100%;
 }
 
 .page-header__list {
   @include set-list();
   flex-wrap: wrap;
   max-width: 900px;
+
+
 }
 
 .page-header__list-item {

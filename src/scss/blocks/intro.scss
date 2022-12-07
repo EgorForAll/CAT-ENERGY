@@ -1,23 +1,42 @@
 .intro {
   min-height: 452px;
+  position: relative;
+  width: 100%;
+}
+
+
+.intro__block {
+  position: relative;
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../../files/img/index__background-mobile.jpg");
+  background-size: 100%;
+  z-index: 1;
+
+  &::after {
+    position: absolute;
+    @include set-size(100%, 100%);
+    content: "";
+    top: 0;
+    left: 0;
+    background-color: #68b738;
+    opacity: 0.8;
+    z-index: 2;
+  }
 }
 
 .intro__title {
-  margin: 0;
   font-family: "Oswald", sans-serif;
+  margin: 30px auto;
+  color: #ffffff;
+  text-transform: none;
   font-style: normal;
   font-weight: 400;
-  font-size: 50px;
-  letter-spacing: 0;
-  text-transform: uppercase;
-}
-
-.intro__block {
-  @include set-size(450px, min-content);
-  display: flex;
-  flex-direction: column;
-  margin-left: 100px;
-  margin-top: 110px;
+  font-size: 36px;
+  line-height: 36px;
+  z-index: 3;
 }
 
 .intro__subtitle {
@@ -26,20 +45,31 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 20px;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
 
   text-transform: uppercase;
+  z-index: 3;
+}
+
+.intro__cup {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  margin: -100px auto 100px;
 }
 
 .intro__button {
   display: flex;
+  margin: -100px 20px 30px;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
 
-  width: 280px;
-  height: 54px;
+  min-height: 54px;
 
   text-decoration: none;
 
@@ -65,39 +95,4 @@
   line-height: 20px;
 
   text-transform: uppercase;
-}
-
-.intro__image-cat {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50%;
-  height: 649px;
-
-  background-image: url("../../files/img/index-background-intro.jpg");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  z-index: 2;
-}
-
-.intro__image-cat-overlay {
-  width: 100%;
-  height: 100%;
-
-  background-color: #68b738;
-  background-size: 100%;
-  opacity: 0.85;
-  z-index: 3;
-}
-
-.intro__cup {
-  position: absolute;
-  width: 500px;
-  height: 500px;
-  right: 24%;
-  top: 35%;
-  background-image: url("../../files/img/intro-cup.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  z-index: 3;
 }

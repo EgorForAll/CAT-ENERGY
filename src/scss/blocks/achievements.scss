@@ -2,20 +2,24 @@
   @include margin-wrapper();
   display: flex;
   justify-content: space-between;
-  margin-top: 82px;
+  margin: 20px;
 }
 
 .achievements__list {
   @include set-list();
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   width: 100%;
 }
 
 .achievements__list-item {
-  width: 560px;
-  min-height: 374px;
+  position: relative;
+  width: 100%;
+  min-height: 265px;
   box-sizing: border-box;
+  padding: 20px;
+  margin-bottom: 20px;
 
   background-color: #f2f2f2;
   z-index: 1;
@@ -23,19 +27,14 @@
 
 .achievements__list-title {
   position: relative;
-  display: flex;
-  min-height: 106px;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  padding-left: 120px;
+  margin: 0;
+  margin-left: 30px;
 
   font-family: "Oswald", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 36px;
-  line-height: 36px;
+  font-size: 24px;
+  line-height: 37px;
   text-transform: uppercase;
   text-align: center;
 
@@ -44,9 +43,10 @@
 
 .achievements__list-title::before {
   position: absolute;
-  left: 50px;
+  left: -15%;
+  top: -20%;
 
-  @include set-size(100px, 100px);
+  @include set-size(50px, 50px);
   content: " ";
   border-radius: 50%;
   background-color: #68b738;
@@ -55,10 +55,10 @@
 
 .achievements__list-item:first-child .achievements__list-title::after {
   position: absolute;
-  top: 0;
-  left: 67px;
+  top: -24%;
+  left: -10%;
 
-  @include set-size(70px, 90px);
+  @include set-size(35px, 50px);
 
   content: "";
   background: url("../../files/img/cat-label.svg") no-repeat;
@@ -68,10 +68,10 @@
 
 .achievements__list-item:nth-child(2) .achievements__list-title::after {
   position: absolute;
-  top: 25;
-  left: 31px;
+  top: 11%;
+  left: -19%;
 
-  @include set-size(134px, 56px);
+  @include set-size(69px, 56px);
 
   content: "";
   background: url("../../files/img/tiger-label.svg") no-repeat;
@@ -80,22 +80,23 @@
 }
 
 .achievements__list-desc {
-  margin-left: 50px;
-  margin-right: 50px;
+  margin: 30px 0 15px;
+  padding-bottom: 23px;
 
   font-family: "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 14px;
+  line-height: 18px;
+
+  color: #444444;
+  border-bottom: 1px solid #d9d9d9;
 }
 
 .achievements__list-link {
   position: relative;
 
-  margin-top: 30px;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin: 0;
 
   font-family: "Oswald", sans-serif;
   font-style: normal;

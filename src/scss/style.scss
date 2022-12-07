@@ -14,33 +14,6 @@
 @import "blocks/catalog-list.scss";
 @import "blocks/extragoods.scss";
 @import "blocks/gift.scss";
-
-@font-face {
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../files/fonts/oswaldregular.woff"),
-    url("../files/files/fonts/oswaldregular.woff2");
-}
-
-@font-face {
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: 700;
-  src: url("../files/fonts/oswaldmedium.woff"),
-    url("../files/fonts/oswaldmedium.woff2");
-}
-
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
+@import "blocks/variables";
+@import "blocks/fonts";
+@import "blocks/visually-hidden";

@@ -3,26 +3,27 @@
 }
 
 .description__title {
-  margin-top: 70px;
-  margin-bottom: 70px;
+  margin: 20px 0 40px;
 
   font-family: "Oswald", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 60px;
-  line-height: 60px;
+  font-size: 36px;
+  line-height: 40px;
 }
 
 .description__list {
   @include set-list ();
   justify-content: space-between;
+  flex-direction: column;
 }
 
 .description-list__item {
   position: relative;
-
-  @include set-size (240px, 280px);
+  width: 100%;
   display: flex;
+  min-height: 60px;
+  margin-bottom: 20px;
   flex-direction: column;
   align-content: center;
 
@@ -34,16 +35,23 @@
 
   color: #444444;
 
-  &:nth-child(1) {
-    background: url("../../files/img/1.svg") no-repeat;
-    background-size: 134px 280px;
-    background-position: 100% 0;
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 0;
 
+    @include set-size(60px, 60px);
+
+    content: "";
+    background-color: #68b738;
+  }
+
+  &:nth-child(1) {
     &::after {
       position: absolute;
       z-index: 3;
-      top: 16%;
-      left: 12%;
+      top: 22%;
+      left: 6%;
 
       @include set-size(30px, 30px);
       content: "";
@@ -53,15 +61,12 @@
   }
 
   &:nth-child(2) {
-    background: url("../../files/img/2.svg") no-repeat;
-    background-size: 134px 280px;
-    background-position: 100% 0;
 
     &::after {
       position: absolute;
       z-index: 3;
-      top: 16%;
-      left: 11%;
+      top: 22%;
+      left: 6%;
 
       @include set-size(30px, 30px);
       content: "";
@@ -71,15 +76,12 @@
   }
 
   &:nth-child(3) {
-    background: url("../../files/img/3.svg") no-repeat;
-    background-size: 134px 280px;
-    background-position: 100% 0;
 
     &::after {
       position: absolute;
       z-index: 3;
-      top: 16%;
-      left: 11%;
+      top: 22%;
+      left: 6%;
 
       @include set-size(30px, 30px);
       content: "";
@@ -89,15 +91,12 @@
   }
 
   &:nth-child(4) {
-    background: url("../../files/img/4.svg") no-repeat;
-    background-size: 134px 280px;
-    background-position: 100% 0;
 
     &::after {
       position: absolute;
       z-index: 3;
-      top: 16%;
-      left: 11%;
+      top: 22%;
+      left: 6%;
 
       @include set-size(30px, 30px);
       content: "";
@@ -107,25 +106,16 @@
   }
 }
 
-.description-list__item::before {
-  position: absolute;
-  left: 0;
-  top: 22px;
-
-  @include set-size(80px, 80px);
-
-  content: "";
-  background-color: #68b738;
-}
-
 .description__list-text {
-  margin-top: 150px;
+  margin: 0;
+  margin-left: 80px;
+  height: 100%;
 
   font-family: "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 14px;
+  line-height: 18px;
 
   color: #444444;
 }
