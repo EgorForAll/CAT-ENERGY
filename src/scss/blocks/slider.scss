@@ -1,7 +1,28 @@
 .slider {
   display: flex;
   flex-direction: column;
+  margin: 70px auto 0;
+  width: 100%;
+  z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    background-color: #eaeaea;
+  }
+}
+
+.slider__image {
   margin: 0 auto;
+
+  @include set-size(280px, 280px);
+  background: url("../../files/img/cat-mobile.png") no-repeat;
+  background-size: 100%;
+
+  @media (min-width: $tablet-width) {
+    margin-top: -150px;
+
+    @include set-size(590px, 510px);
+    background: url("../../files/img/image_cat_slider.png") no-repeat;
+  }
 }
 
 .slider__bar {
@@ -26,9 +47,15 @@
   &:hover {
     border-bottom: 1px solid #000000;
   }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .slider__line {
+  position: relative;
   transform: translateY(5px);
   width: 85px;
   height: 14px;
@@ -36,12 +63,20 @@
 
   background-color: #ffffff;
   border-radius: 6px;
+  z-index: 2;
+
+  @media (min-width: $tablet-width) {
+    width: 425px;
+    height: 6px;
+    background-color: #dcdcdc;
+    transform: translateY(15px);
+  }
 }
 
 .slider__toggle {
-  position: absolute;
-  left: 35%;
-  top: 45%;
+  position: static;
+  z-index: 3;
+  transform: translate(-143px, 9px);
 
   @include set-size(35px, 6px);
   border-radius: 6px;
@@ -55,6 +90,27 @@
   &:active {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.19);
     border: 1px solid #68b738;
+  }
+
+  @media (min-width: $tablet-width) {
+    position: static;
+    transform: translateX(-283px);
+
+    @include set-size(33px, 33px);
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 1px solid #cdcdcd;
+
+    &::after {
+      top: 12px;
+      left: 11px;
+      position: absolute;
+      content: "";
+
+      @include set-size(8px, 8px);
+      background-color: #68b738;
+      border-radius: 50%;
+    }
   }
 }
 

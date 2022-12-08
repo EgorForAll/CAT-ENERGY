@@ -1,5 +1,15 @@
+.description {
+  @media (min-width: $tablet-width) {
+    border-bottom: 1px solid #e6e6e6;
+  }
+}
+
 .description-wrapper {
-  @include margin-wrapper ();
+  @include margin-wrapper();
+
+  @media (min-width: $tablet-width) {
+    @include margin-wrapper ($margin-left: 30px, $margin-right: 30px);
+  }
 }
 
 .description__title {
@@ -10,12 +20,29 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
+
+  @media (min-width: $tablet-width) {
+    width: 375px;
+    margin: 20px 0 40px;
+    text-align: center;
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .description__list {
   @include set-list ();
   justify-content: space-between;
   flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+    width: 660px;
+    display: grid;
+    grid-template-columns: repeat(2, 230px);
+    justify-content: flex-start;
+    column-gap: 150px;
+  }
 }
 
 .description-list__item {
@@ -24,7 +51,6 @@
   width: 100%;
   min-height: 60px;
   margin-bottom: 20px;
-  align-content: center;
 
   font-family: "Arial", sans-serif;
   font-style: normal;
@@ -34,33 +60,96 @@
 
   color: #444444;
 
-  &:nth-child(1) .description-list__label {
-    background-image: url("../../files/img/icon_leaf.svg");
-    background-size: 30px 30px;
-    background-position: 50%;
-    background-repeat: no-repeat;
+  &:nth-child(1) {
+    .description-list__label {
+      background-image: url("../../files/img/icon_leaf.svg");
+      background-size: 30px 30px;
+      background-position: 50%;
+      background-repeat: no-repeat;
+    }
+
+    @media (min-width: $tablet-width) {
+      width: 230px;
+      min-height: 280px;
+      flex-direction: column;
+
+      &::after {
+        @include set-size(100%, 100%);
+        position: absolute;
+        content: "";
+        background: url("../../files/img/1.svg") no-repeat;
+        background-position: 90% 0;
+      }
+    }
   }
 
-  &:nth-child(2) .description-list__label {
-    background-image: url("../../files/img/icon_tub.svg");
-    background-size: 30px 30px;
-    background-position: 50%;
-    background-repeat: no-repeat;
+  &:nth-child(2) {
+    .description-list__label {
+      background-image: url("../../files/img/icon_tub.svg");
+      background-size: 30px 30px;
+      background-position: 50%;
+      background-repeat: no-repeat;
+    }
+
+    @media (min-width: $tablet-width) {
+      width: 230px;
+      min-height: 280px;
+      flex-direction: column;
+
+      &::after {
+        @include set-size(100%, 100%);
+        position: absolute;
+        content: "";
+        background: url("../../files/img/2.svg") no-repeat;
+        background-position: 90% 0;
+      }
+    }
   }
 
+  &:nth-child(3) {
+    .description-list__label {
+      background-image: url("../../files/img/icon_eat.svg");
+      background-size: 30px 30px;
+      background-position: 50%;
+      background-repeat: no-repeat;
+    }
 
-  &:nth-child(3) .description-list__label {
-    background-image: url("../../files/img/icon_eat.svg");
-    background-size: 30px 30px;
-    background-position: 50%;
-    background-repeat: no-repeat;
+    @media (min-width: $tablet-width) {
+      width: 230px;
+      min-height: 280px;
+      flex-direction: column;
+
+      &::after {
+        @include set-size(100%, 100%);
+        position: absolute;
+        content: "";
+        background: url("../../files/img/3.svg") no-repeat;
+        background-position: 90% 0;
+      }
+    }
   }
 
-  &:nth-child(4) .description-list__label {
-    background-image: url("../../files/img/icon_alarm.svg");
-    background-size: 30px 30px;
-    background-position: 50%;
-    background-repeat: no-repeat;
+  &:nth-child(4) {
+    .description-list__label {
+      background-image: url("../../files/img/icon_alarm.svg");
+      background-size: 30px 30px;
+      background-position: 50%;
+      background-repeat: no-repeat;
+    }
+
+    @media (min-width: $tablet-width) {
+      width: 230px;
+      min-height: 280px;
+      flex-direction: column;
+
+      &::after {
+        @include set-size(100%, 100%);
+        position: absolute;
+        content: "";
+        background: url("../../files/img/4.svg") no-repeat;
+        background-position: 90% 0;
+      }
+    }
   }
 }
 
@@ -71,6 +160,11 @@
   @include set-size(60px, 60px);
   background-color: #68b738;
   z-index: 2;
+
+  @media (min-width: $tablet-width) {
+    @include set-size(80px, 112px);
+    margin-right: 0;
+  }
 }
 
 .description__list-text {
@@ -87,4 +181,9 @@
 
   color: #444444;
   z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    transform: translateY(40px);
+    width: 100%;
+  }
 }

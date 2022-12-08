@@ -25,6 +25,11 @@
   display: flex;
   background-color: #ffffff;
   z-index: 2;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    padding: 0 70px;
+  }
 }
 
 .contacts__adress {
@@ -37,10 +42,24 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
+  text-align: end;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+  }
 }
 
 .contacts__map {
   width: 100%;
   min-height: 360px;
   display: flex;
+
+  background: url("../../files/img/location.jpg") no-repeat;
+  background-size: 100%;
+
+  @media (min-width: $tablet-width) {
+    min-height: 400px;
+    background: url("../../files/img/location-tablet.jpg") no-repeat;
+    background-size: 100%;
+  }
 }

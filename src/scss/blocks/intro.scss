@@ -4,7 +4,6 @@
   width: 100%;
 }
 
-
 .intro__block {
   position: relative;
   width: 100%;
@@ -17,6 +16,7 @@
 
   &::after {
     position: absolute;
+
     @include set-size(100%, 100%);
     content: "";
     top: 0;
@@ -24,6 +24,14 @@
     background-color: #68b738;
     opacity: 0.8;
     z-index: 2;
+  }
+
+  @media (min-width: $tablet-width) {
+    background-image: none;
+
+    &::after {
+      position: relative;
+    }
   }
 }
 
@@ -37,6 +45,15 @@
   font-size: 36px;
   line-height: 36px;
   z-index: 3;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 60px;
+    margin-left: 120px;
+    font-size: 60px;
+    line-height: 60px;
+    color: #000000;
+    z-index: 2;
+  }
 }
 
 .intro__subtitle {
@@ -45,12 +62,39 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 20px;
-  width: 100%;
   text-align: center;
   color: #ffffff;
 
   text-transform: uppercase;
   z-index: 3;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    margin-top: 40px;
+    margin-left: 120px;
+    font-size: 20px;
+    line-height: 20px;
+    color: #000000;
+    text-align: start;
+    z-index: 2;
+  }
+}
+
+.intro__cup-container img {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.intro__cup-container {
+  @media (min-width: $tablet-width) {
+    margin-top: -20px;
+
+    @include set-size(700px, 600px);
+    background-image: url("../../files/img/index-can-tablet 1.jpg");
+    background-size: 100%;
+    z-index: 1;
+  }
 }
 
 .intro__cup {
@@ -58,11 +102,17 @@
   z-index: 4;
   display: flex;
   margin: -100px auto 100px;
+
+  @media (min-width: $tablet-width) {
+    @include set-size(700px, 600px);
+  }
 }
 
 .intro__button {
   display: flex;
-  margin: -100px 20px 30px;
+  margin-top: -100px;
+  margin-left: 20px;
+  margin-right: 20px;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
@@ -83,6 +133,12 @@
   &:active {
     background: #5eaa2f;
     color: rgba(255, 255, 255, 0.5);
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 250px;
+    margin-left: 120px;
+    transform: translateY(-450px);
   }
 }
 

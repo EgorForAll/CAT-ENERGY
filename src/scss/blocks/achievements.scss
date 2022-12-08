@@ -2,11 +2,15 @@
   @include margin-wrapper();
   display: flex;
   justify-content: space-between;
-  margin: 20px;
+
+  @media (min-width: $tablet-width) {
+    @include margin-wrapper($margin-left: 30px, $margin-right: 30px,);
+  }
 }
 
 .achievements__list {
   @include set-list();
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -23,6 +27,12 @@
 
   background-color: #f2f2f2;
   z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    padding: 40px;
+    margin-bottom: 30px;
+    min-height: 372px;
+  }
 }
 
 .achievements__list-title {
@@ -39,26 +49,31 @@
   text-align: center;
 
   color: #000000;
-}
 
-.achievements__list-title::before {
-  position: absolute;
-  left: -15%;
-  top: -20%;
-
-  content: " ";
-
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    order: 1;
+    width: 60%;
+    text-align: start;
+    margin-left: 0;
+  }
 }
 
 .achievements__list-item:first-child .achievements__label::after {
   position: absolute;
   top: 0;
   left: 14%;
+
   @include set-size(35px, 50px);
   background: url("../../files/img/cat-label.svg") no-repeat;
   background-size: 100%;
   z-index: 2;
   content: "";
+
+  @media (min-width: $tablet-width) {
+    @include set-size(140px, 195px);
+  }
 }
 
 .achievements__list-item:nth-child(2) .achievements__label::after {
@@ -72,6 +87,10 @@
   background: url("../../files/img/tiger-label.svg") no-repeat;
   background-size: 100%;
   z-index: 2;
+
+  @media (min-width: $tablet-width) {
+    @include set-size(270px, 110px);
+  }
 }
 
 .achievements__title-box {
@@ -80,10 +99,20 @@
 
 .achievements__label {
   position: relative;
+
   @include set-size(50px, 50px);
   border-radius: 50%;
   background-color: #68b738;
   z-index: 2;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    margin-left: 5%;
+
+    @include set-size(200px, 200px);
+    transform: translateY(30px);
+    order: 2;
+  }
 }
 
 .achievements__list-desc {
@@ -98,6 +127,16 @@
 
   color: #444444;
   border-bottom: 1px solid #d9d9d9;
+
+  @media (min-width: $tablet-width) {
+    width: 50%;
+    margin-top: -130px;
+    margin-bottom: 70px;
+    font-size: 16px;
+    line-height: 24px;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
 }
 
 .achievements__list-link {
