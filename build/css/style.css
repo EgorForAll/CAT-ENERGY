@@ -1,20 +1,34 @@
 .page-header {
   width: 100%;
-  margin: 20px auto;
-  padding: 0 30px;
+  margin: 10px auto 0;
   display: flex;
-  justify-content: space-between;
-  box-sizing: border-box;
+  flex-direction: column;
   align-items: center;
 }
 
-.page-header__main-nav {
+.page-header__container {
+  width: 100%;
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-header__logo-image {
+  margin-left: 20px;
+}
+
+.page-header__main-nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .page-header__toggle {
   width: 24px;
   height: 20px;
+  margin-right: 20px;
   border: none;
   background: url("../../files/img/icons/burger.svg") no-repeat;
   background-size: 100%;
@@ -25,17 +39,15 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
-  flex-wrap: wrap;
-  max-width: 900px;
+  flex-direction: column;
+  width: 100%;
 }
 
 .page-header__list-item {
-  margin-right: 35px;
-  /* stylelint-disable-next-line rule-empty-line-before */
-}
-
-.page-header__list-item:last-child {
-  margin-right: 0;
+  padding: 10px 0;
+  text-align: center;
+  border-bottom: 1px solid #e6e6e6;
+  border-top: 1px solid #e6e6e6;
 }
 
 .page-heder__link {
@@ -43,10 +55,11 @@
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
-  line-height: 30px;
+  line-height: 20px;
   text-transform: uppercase;
   text-decoration: none;
-  color: #ffffff;
+  text-align: center;
+  color: #000000;
 }
 
 .page-heder__link:hover {
@@ -246,35 +259,43 @@
   position: absolute;
   left: -15%;
   top: -20%;
-  width: 50px;
-  height: 50px;
   content: " ";
-  border-radius: 50%;
-  background-color: #68b738;
-  z-index: 2;
 }
 
-.achievements__list-item:first-child .achievements__list-title::after {
+.achievements__list-item:first-child .achievements__label::after {
   position: absolute;
-  top: -24%;
-  left: -10%;
+  top: 0;
+  left: 14%;
   width: 35px;
   height: 50px;
-  content: "";
   background: url("../../files/img/cat-label.svg") no-repeat;
   background-size: 100%;
   z-index: 2;
+  content: "";
 }
 
-.achievements__list-item:nth-child(2) .achievements__list-title::after {
+.achievements__list-item:nth-child(2) .achievements__label::after {
   position: absolute;
-  top: 11%;
+  top: 22%;
   left: -19%;
   width: 69px;
   height: 56px;
   content: "";
   background: url("../../files/img/tiger-label.svg") no-repeat;
   background-size: 100%;
+  z-index: 2;
+}
+
+.achievements__title-box {
+  display: flex;
+}
+
+.achievements__label {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #68b738;
   z-index: 2;
 }
 
@@ -359,11 +380,10 @@
 
 .description-list__item {
   position: relative;
-  width: 100%;
   display: flex;
+  width: 100%;
   min-height: 60px;
   margin-bottom: 20px;
-  flex-direction: column;
   align-content: center;
   font-family: "Arial", sans-serif;
   font-style: normal;
@@ -373,74 +393,55 @@
   color: #444444;
 }
 
-.description-list__item::before {
-  position: absolute;
-  left: 0;
-  top: 0;
+.description-list__item:nth-child(1) .description-list__label {
+  background-image: url("../../files/img/icon_leaf.svg");
+  background-size: 30px 30px;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+.description-list__item:nth-child(2) .description-list__label {
+  background-image: url("../../files/img/icon_tub.svg");
+  background-size: 30px 30px;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+.description-list__item:nth-child(3) .description-list__label {
+  background-image: url("../../files/img/icon_eat.svg");
+  background-size: 30px 30px;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+.description-list__item:nth-child(4) .description-list__label {
+  background-image: url("../../files/img/icon_alarm.svg");
+  background-size: 30px 30px;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+.description-list__label {
+  position: relative;
+  margin-right: 20px;
   width: 60px;
   height: 60px;
-  content: "";
   background-color: #68b738;
-}
-
-.description-list__item:nth-child(1)::after {
-  position: absolute;
-  z-index: 3;
-  top: 22%;
-  left: 6%;
-  width: 30px;
-  height: 30px;
-  content: "";
-  background: url("../../files/img/icon_leaf.svg");
-  background-size: 100%;
-}
-
-.description-list__item:nth-child(2)::after {
-  position: absolute;
-  z-index: 3;
-  top: 22%;
-  left: 6%;
-  width: 30px;
-  height: 30px;
-  content: "";
-  background: url("../../files/img/icon_tub.svg");
-  background-size: 100%;
-}
-
-.description-list__item:nth-child(3)::after {
-  position: absolute;
-  z-index: 3;
-  top: 22%;
-  left: 6%;
-  width: 30px;
-  height: 30px;
-  content: "";
-  background: url("../../files/img/icon_eat.svg");
-  background-size: 100%;
-}
-
-.description-list__item:nth-child(4)::after {
-  position: absolute;
-  z-index: 3;
-  top: 22%;
-  left: 6%;
-  width: 30px;
-  height: 30px;
-  content: "";
-  background: url("../../files/img/icon_alarm.svg");
-  background-size: 100%;
+  z-index: 2;
 }
 
 .description__list-text {
   margin: 0;
-  margin-left: 80px;
+  width: 80%;
   height: 100%;
+  justify-self: flex-end;
   font-family: "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   color: #444444;
+  z-index: 1;
 }
 
 .example {

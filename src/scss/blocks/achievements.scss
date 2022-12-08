@@ -46,29 +46,24 @@
   left: -15%;
   top: -20%;
 
-  @include set-size(50px, 50px);
   content: " ";
-  border-radius: 50%;
-  background-color: #68b738;
-  z-index: 2;
+
 }
 
-.achievements__list-item:first-child .achievements__list-title::after {
+.achievements__list-item:first-child .achievements__label::after {
   position: absolute;
-  top: -24%;
-  left: -10%;
-
+  top: 0;
+  left: 14%;
   @include set-size(35px, 50px);
-
-  content: "";
   background: url("../../files/img/cat-label.svg") no-repeat;
   background-size: 100%;
   z-index: 2;
+  content: "";
 }
 
-.achievements__list-item:nth-child(2) .achievements__list-title::after {
+.achievements__list-item:nth-child(2) .achievements__label::after {
   position: absolute;
-  top: 11%;
+  top: 22%;
   left: -19%;
 
   @include set-size(69px, 56px);
@@ -76,6 +71,18 @@
   content: "";
   background: url("../../files/img/tiger-label.svg") no-repeat;
   background-size: 100%;
+  z-index: 2;
+}
+
+.achievements__title-box {
+  display: flex;
+}
+
+.achievements__label {
+  position: relative;
+  @include set-size(50px, 50px);
+  border-radius: 50%;
+  background-color: #68b738;
   z-index: 2;
 }
 
