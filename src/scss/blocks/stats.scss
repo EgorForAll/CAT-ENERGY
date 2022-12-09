@@ -4,6 +4,11 @@
   margin-top: 40px;
   width: 100%;
   min-height: 317px;
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    min-height: auto;
+  }
 }
 
 .stats__text {
@@ -15,4 +20,10 @@
   font-size: 16px;
   line-height: 24px;
   color: #444444;
+
+  @media (min-width: $desktop-width) {
+    margin-left: 110px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
 }

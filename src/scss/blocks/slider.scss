@@ -8,6 +8,11 @@
   @media (min-width: $tablet-width) {
     background-color: #eaeaea;
   }
+
+  @media (min-width: $desktop-width) {
+    grid-area: slider;
+    margin-top: 0;
+  }
 }
 
 .slider__image {

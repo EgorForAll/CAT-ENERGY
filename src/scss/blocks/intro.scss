@@ -33,6 +33,10 @@
       position: relative;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 100px;
+  }
 }
 
 .intro__title {
@@ -95,6 +99,16 @@
     background-size: 100%;
     z-index: 1;
   }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    left: 34%;
+    top: -8%;
+    background-image: url("../../files/img/index-can-desktop.png");
+    z-index: 5;
+
+    @include set-size(560px, 500px);
+  }
 }
 
 .intro__cup {
@@ -105,6 +119,10 @@
 
   @media (min-width: $tablet-width) {
     @include set-size(700px, 600px);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include set-size(550px, 500px);
   }
 }
 
@@ -139,6 +157,12 @@
     width: 250px;
     margin-left: 120px;
     transform: translateY(-450px);
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 250px;
+    margin-left: 120px;
+    transform: translateY(120px);
   }
 }
 
