@@ -1,42 +1,117 @@
 .extragoods__fieldset {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  width: 100%;
   border: none;
   border-top: 2px solid #68b738;
 }
 
-.extragoods__legend {
-  margin-left: 100px;
-}
-
 .extragoods__fieldset-title {
   margin: 0;
+  font-size: 24px;
+  line-height: 24px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+.extragoods__legend {
+  margin: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 110px;
+  }
+}
+
+.catalog-wrapper {
+  @include margin-wrapper();
+  width: 100%;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    @include margin-wrapper($margin-left: 30px, $margin-right:30px);
+    justify-content: flex-start;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include margin-wrapper($margin-left: 110px, $margin-right: 110px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .extragoods__list {
   @include set-list();
   display: flex;
   flex-direction: column;
-  margin: 80px 0;
-  width: 800px;
+  margin: 35px auto;
+  width: 100%;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    width: 70%;
+    margin: 80px 0 90px;
+  }
 }
 
 .extragoods__item {
-  display: flex;
   width: 100%;
-  justify-content: space-between;
-  align-items: baseline;
-  padding: 15px 0;
-  box-sizing: border-box;
+  margin-bottom: 25px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto auto auto;
+  gap: 5px 0;
+  grid-template-areas:
+    "extragoods__title extragoods__title"
+    "extragoods__volume extragoods__price"
+    "extragoods__button extragoods__button";
 
   border-top: 1px solid #cdcdcd;
 
   &:last-child {
     border-bottom: 1px solid #cdcdcd;
   }
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 30% 30% 20% 20%;
+    grid-template-rows: min-content 40px;
+    gap: 0 0;
+    grid-template-areas:
+      "extragoods__title extragoods__title extragoods__volume extragoods__price"
+      "extragoods__button extragoods__button extragoods__button extragoods__button";
+    border: 1px solid #cdcdcd;
+    padding: 20px 30px;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    padding: 17px 0;
+    margin: 0;
+    grid-template-columns: 20% 15% 6% 32%;
+    grid-template-rows: 40px;
+    align-items: center;
+    column-gap: 9%;
+    grid-template-areas: "extragoods__title extragoods__volume extragoods__price extragoods__button";
+    border: none;
+    border-top: 1px solid #cdcdcd;
+    box-sizing: border-box;
+  }
 }
 
 .extragoods__title {
-  width: 25%;
-  display: block;
+  width: 100%;
+  grid-area: extragoods__title;
+  padding: 0;
+  padding-top: 10px;
 
   font-family: "Oswald", sans-serif;
   font-style: normal;
@@ -49,34 +124,36 @@
 }
 
 .extragoods__volume {
-  width: 17%;
+  grid-area: extragoods__volume;
+  padding: 10px 0;
 
   font-family: "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
-
+  text-align: start;
 
   color: #444444;
 }
 
 .extragoods__price {
-  width: 8%;
+  padding: 10px 0;
+  grid-area: extragoods__price;
 
   font-family: "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
+  text-align: end;
 
   color: #444444;
 }
 
 .extragoods__button {
-  width: 32%;
-  height: 40px;
-  border: none;
+  grid-area: extragoods__button;
+  padding: 15px 0;
 
   font-family: "Oswald", sans-serif;
   font-style: normal;
@@ -88,6 +165,7 @@
 
   background-color: #68b738;
   color: #ffffff;
+  border: none;
 
   &:hover {
     background-color: #5eaa2f;

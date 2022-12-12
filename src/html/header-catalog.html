@@ -1,31 +1,33 @@
-<header class="page-header">
+<header class="page-header catalog__header">
 
-    <div class="page-header-wrapper">
+  <div class="page-header__container">
+    <a href="">
+      <img class="page-header__logo-image" src="../files/img/header_logo-image.svg" alt="Логотип бренда">
+    </a>
+    <a href="">
+      <img class="page-header__logo-title" src="../files/img/header_logo-title.svg" alt="Название бренда">
+    </a>
 
-      <a class="page-header__logo" href="">
-        <img class="page-header__logo-image" src="../files/img/header-logo.svg" width="200" height="60" alt="Логотип">
-      </a>
+    <button class="page-header__toggle" type="button">
+      <span class="visually-hidden">Закрыть меню</span>
+    </button>
+  </div>
 
-      <nav class="page-header__main-nav">
+  <nav class="page-header__main-nav">
 
-        <button class="page-header__toggle" type="button">
-          <span class="visually-hidden">Закрыть меню</span>
-        </button>
+      <ul class="page-header__list">
 
-          <ul class="page-header__list">
+        <li class="page-header__list-item">
+          <a class="catalog__link" href="../index.html">Главная</a>
+        </li>
+        <li class="page-header__list-item">
+          <a class="catalog__link catalog__link--active" href="../catalog.html">Каталог продукции</a>
+        </li>
+        <li class="page-header__list-item">
+          <a class="catalog__link" href="../form.html">Подбор программы</a>
+        </li>
 
-            <li class="page-header__list-item">
-              <a class="page-header__link--form" href="../index.html">Главная</a>
-            </li>
-            <li class="page-header__list-item page-header__link--form--active ">
-              <a class="page-header__link--form" href="../catalog.html">Каталог продукции</a>
-            </li>
-            <li class="page-header__list-item">
-              <a class="page-header__link--form" href="../form.html">Подбор программы</a>
-            </li>
+      </ul>
+  </nav>
 
-          </ul>
-      </nav>
-
-    </div>
   </header>

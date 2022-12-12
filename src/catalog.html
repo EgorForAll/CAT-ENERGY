@@ -12,12 +12,10 @@
 
       <h2 class="visually-hidden">Cписок товаров</h2>
 
-      <div class="catalog__list-wrapper">
-
         <div class="catalog__card">
 
           <div class="card__image">
-            <img class="card__image-set" src="files/img/catalog-images/chicken_500.png" width="160" height="170" alt="Упаковка 500г со вкусом курицы">
+            <img class="card__image-set" src="files/img/catalog-images/chicken_500.png" alt="Упаковка 500г со вкусом курицы">
           </div>
           <div class="card__title">
             <span>Cat Energy PRO <br> 500 г</span>
@@ -42,7 +40,7 @@
         <div class="catalog__card">
 
           <div class="card__image">
-            <img class="card__image-set" src="files/img/catalog-images/checken_1000.png" width="170" height="200"  alt="Упаковка 1000г со вкусом курицы">
+            <img class="card__image-set" src="files/img/catalog-images/checken_1000.png" alt="Упаковка 1000г со вкусом курицы">
           </div>
           <div class="card__title">
             <span>Cat Energy PRO <br> 1000 г</span>
@@ -193,25 +191,19 @@
 
           <div class="card__image"></div>
           <div class="card__title">
-            <span>Показать еще <br> 100500 товаров</span>
+            <span>Показать еще 100500 товаров</span>
           </div>
           <div class="card__mass-option">
-            <!-- <span>Масса</span>
-            <span>1000 г</span> -->
           </div>
-          <div class="card__test-option">
-            <span>На самом деле вкусов гораздо больше!</span>
-          </div>
+          <span class="card__test-option">
+            На самом деле вкусов гораздо больше!
+          </span>
           <div class="card__price-option">
-            <!-- <span>Цена</span>
-            <span>1000 Р.</span> -->
           </div>
           <button class="card__button">Показать все</button>
 
         </div>
 
-      </div>
-      <!-- catalog-wrapper -->
     </section>
 
     <section class="extragoods">
@@ -255,22 +247,29 @@
                 </div>
               </div>
             </div>
+            <!-- catalog-wrapper -->
           </fieldset>
         </form>
         <!-- catalog__extragoods-form -->
 
     </section>
-    <section class="contacts">
+    <section class="catalog__contacts">
       <h2 class="visually-hidden">Как с нами связаться</h2>
 
-      <div class="contacts__box">
+      <div class="contacts__box contacts__box--box">
 
-        <p class="contacts__title">Приглашаем <br>
+        <p class="contacts__title contacts__title--catalog">Приглашаем <br>
         к сотрудничеству <br>
         дилеров!</p>
-        <address class="contacts__adress"><p>ул. Большая
-        Конюшенная, д. 19/8</p>
-        <p>Санкт-Петербург</p></address>
+        <address class="contacts__adress contacts__adress--catalog">
+          <p class="contacts__street">ул. Большая
+          Конюшенная, д. 19/8</p>
+          <p class="contacts__city">Санкт-Петербург</p>
+        </address>
+
+      </div>
+
+      <div class="contacts__map">
 
       </div>
     </section>
