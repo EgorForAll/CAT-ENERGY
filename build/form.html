@@ -4,43 +4,45 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.min.css?_v=20221212174527">
+  <link rel="stylesheet" href="css/style.min.css?_v=20221213151914">
   <link rel="icon" href="../files/img/favicon/favicon.ico">
   <title>Подбор программы</title>
 </head>
 
 <body class="page-body">
 
-<header class="page-header">
+<header class="page-header catalog__header">
 
-    <div class="page-header-wrapper">
+  <div class="page-header__container">
+    <a href="">
+      <img class="page-header__logo-image" src="../files/img/header_logo-image.svg" alt="Логотип бренда">
+    </a>
+    <a href="">
+      <img class="page-header__logo-title" src="../files/img/header_logo-title.svg" alt="Название бренда">
+    </a>
 
-      <a class="page-header__logo" href="">
-        <img class="page-header__logo-image" src="../files/img/header-logo.svg" width="200" height="60" alt="Логотип">
-      </a>
+    <button class="page-header__toggle" type="button">
+      <span class="visually-hidden">Закрыть меню</span>
+    </button>
+  </div>
 
-      <nav class="page-header__main-nav">
+  <nav class="page-header__main-nav">
 
-        <button class="page-header__toggle" type="button">
-          <span class="visually-hidden">Закрыть меню</span>
-        </button>
+      <ul class="page-header__list">
 
-          <ul class="page-header__list">
+        <li class="page-header__list-item">
+          <a class="catalog__link" href="../index.html">Главная</a>
+        </li>
+        <li class="page-header__list-item">
+          <a class="catalog__link" href="../catalog.html">Каталог продукции</a>
+        </li>
+        <li class="page-header__list-item">
+          <a class="catalog__link catalog__link--active" href="../form.html">Подбор программы</a>
+        </li>
 
-            <li class="page-header__list-item">
-              <a class="page-header__link--form" href="../index.html">Главная</a>
-            </li>
-            <li class="page-header__list-item">
-              <a class="page-header__link--form" href="../catalog.html">Каталог продукции</a>
-            </li>
-            <li class="page-header__list-item">
-              <a class="page-header__link--form page-header__link--form--active " href="../form.html">Подбор программы</a>
-            </li>
+      </ul>
+  </nav>
 
-          </ul>
-      </nav>
-
-    </div>
   </header>
 
 
@@ -58,9 +60,11 @@
 
             <legend><h2 class="visually-hidden">Данные кота и цель программы</h2></legend>
 
-            <div class="form-wrapper">
 
-                <div class="form__options">
+
+              <div class="form__options">
+
+                <div class="form-wrapper">
 
                   <label class="form__field" for="name">
                     <span class="form__options-title">Имя:<sup>*</sup></span>
@@ -76,42 +80,47 @@
                   </label>
 
                 </div>
+                <!-- form-wrapper -->
+              </div>
+              <!-- form__options -->
 
-              <ul class="form__achievement">
+              <div class="form-wrapper">
 
-                <li class="form__achievement-type">
+                <ul class="form__achievement">
 
-                  <label for="loss-weight">
-                  <input class="form__radio" type="radio" id="loss-weight" name="achievement-type" value="lost-wieight" hidden>
-                  <span class="form__radio-mark"></span>
-                  <span class="form__radio-title">Похудение</span>
-                </label>
+                    <li class="form__achievement-type">
 
-                </li>
+                      <label for="loss-weight">
+                      <input class="form__radio" type="radio" id="loss-weight" name="achievement-type" value="lost-wieight" hidden>
+                      <span class="form__radio-mark"></span>
+                      <span class="form__radio-title">Похудение</span>
+                    </label>
 
-                <li class="form__achievement-type">
+                    </li>
 
-                  <label for="gain-weight">
-                    <input class="form__radio" type="radio" id="gain-weight" name="achievement-type" value="gain-weight" hidden>
-                    <span class="form__radio-mark"></span>
-                    <span class="form__radio-title">Набор массы</span>
-                  </label>
+                    <li class="form__achievement-type">
 
-                </li>
+                      <label for="gain-weight">
+                        <input class="form__radio" type="radio" id="gain-weight" name="achievement-type" value="gain-weight" hidden>
+                        <span class="form__radio-mark"></span>
+                        <span class="form__radio-title">Набор массы</span>
+                      </label>
 
-                <li class="form__achievement-type">
+                    </li>
 
-                  <label for="not-defined">
-                    <input class="form__radio" type="radio" id="not-defined" name="achievement-type" value="not-defined" hidden>
-                    <span class="form__radio-mark"></span>
-                    <span class="form__radio-title">Не знаю (нужен ваш совет)</span>
-                  </label>
+                    <li class="form__achievement-type">
 
-                </li>
+                      <label for="not-defined">
+                        <input class="form__radio" type="radio" id="not-defined" name="achievement-type" value="not-defined" hidden>
+                        <span class="form__radio-mark"></span>
+                        <span class="form__radio-title">Не знаю (нужен ваш совет)</span>
+                      </label>
 
-              </ul>
+                    </li>
 
-            </div>
+                </ul>
+              </div>
+              <!-- form-wrapper -->
 
           </fieldset>
 
@@ -119,22 +128,26 @@
 
             <legend class="form__fieldset-legend"><h2 class="form__section-title">Контактные данные (владельца кота)</h2></legend>
 
-            <div class="form-wrapper">
+
 
               <div class="form__section-container">
-                <label class="form__section-field" for="email">
-                  <span class="form__options-title">Email:<sup>*</sup></span>
-                  <input class="email form__contacts-input" type="email" id="email" name="email" placeholder="kuklachev@gmail.com">
-                </label>
 
-                <label class="form__section-field" for="telephone">
-                  <span class="form__options-title">Телефон:<sup>*</sup></span>
-                  <input class="telephone form__contacts-input" type="tel" id="telephone" name="telephone" placeholder="8(960) 900-60-90">
-                </label>
+                <div class="form-wrapper">
+
+                  <label class="form__section-field" for="email">
+                    <span class="form__options-title">Email:<sup>*</sup></span>
+                    <input class="email form__contacts-input" type="email" id="email" name="email" placeholder="kuklachev@gmail.com">
+                  </label>
+
+                  <label class="form__section-field" for="telephone">
+                    <span class="form__options-title">Телефон:<sup>*</sup></span>
+                    <input class="telephone form__contacts-input" type="tel" id="telephone" name="telephone" placeholder="8(960) 900-60-90">
+                  </label>
+
+                </div>
+                <!-- form-wrapper -->
               </div>
-
-            </div>
-
+              <!-- form__section-container -->
           </fieldset>
 
           <fieldset class="form__section">
@@ -204,21 +217,25 @@
 
     </section>
 
-   <section class="contacts">
-
+   <section class="catalog__contacts">
       <h2 class="visually-hidden">Как с нами связаться</h2>
 
-      <div class="contacts__box">
+      <div class="contacts__box contacts__box--box">
 
-        <p class="contacts__title">Приглашаем <br>
+        <p class="contacts__title contacts__title--catalog">Приглашаем <br>
         к сотрудничеству <br>
         дилеров!</p>
-        <address class="contacts__adress"><p>ул. Большая
-        Конюшенная, д. 19/8</p>
-        <p>Санкт-Петербург</p></address>
+        <address class="contacts__adress contacts__adress--catalog">
+          <p class="contacts__street">ул. Большая
+          Конюшенная, д. 19/8</p>
+          <p class="contacts__city">Санкт-Петербург</p>
+        </address>
 
       </div>
 
+      <div class="contacts__map">
+
+      </div>
     </section>
 
   </main>
