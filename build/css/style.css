@@ -885,7 +885,6 @@
   flex-direction: column;
   align-items: center;
   list-style-type: none;
-  border-bottom: 1px solid #d9d9d9;
 }
 
 .form__achievement-type {
