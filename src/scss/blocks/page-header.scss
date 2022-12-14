@@ -119,11 +119,27 @@
 }
 
 .page-header__toggle {
-  @include set-size(24px, 20px);
-  margin-right: 20px;
+  position: relative;
+
+  @include set-size(30px, 20px);
+  background-color: #ffffff;
   border: none;
-  background: url("../../files/img/icons/burger.svg") no-repeat;
-  background-size: 100%;
+  margin-right: 20px;
+  padding: 0;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    right: 0;
+
+    @include set-size(24px, 1.5px);
+    content: "";
+    background-color: #000000;
+    box-shadow:
+      0 8px 0 0 #000000,
+      0 -8px 0 0 #000000;
+  }
+
 
   @media (min-width: $tablet-width) {
     display: none;
