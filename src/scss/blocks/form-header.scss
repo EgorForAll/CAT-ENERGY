@@ -1,4 +1,4 @@
-.catalog__header {
+.form__header {
   width: 100%;
   margin: 10px auto 0;
   display: flex;
@@ -26,7 +26,7 @@
   }
 }
 
-.catalog__link {
+.form__link {
   font-family: "Oswald", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -59,7 +59,7 @@
   }
 }
 
-.catalog__link--active {
+.form__link--active {
   @media (min-width: $tablet-width) {
     padding-bottom: 10px;
     border-bottom: 2px solid #68b738;
