@@ -48,6 +48,13 @@
       background: url("../../files/img/index-background-intro.jpg") no-repeat;
       background-size: 100%;
       z-index: 2;
+
+      @media (min-resolution: 2dppx) {
+        @include set-size(720px, 700px);
+        background: url("../../files/img/index-background-desktop 1@2x.png") no-repeat;
+        background-size: 100% 100%;
+        z-index: 2;
+      }
     }
 
     &::after {
@@ -60,6 +67,10 @@
       background-color: #68b738;
       opacity: 0.85;
       z-index: 3;
+
+      @media (min-resolution: 2dppx) {
+        @include set-size(717px, 692px);
+      }
     }
   }
 }

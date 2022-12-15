@@ -116,14 +116,6 @@
   z-index: 4;
   display: flex;
   margin: -100px auto 100px;
-
-  @media (min-width: $tablet-width) {
-    @include set-size(700px, 600px);
-  }
-
-  @media (min-width: $desktop-width) {
-    @include set-size(550px, 500px);
-  }
 }
 
 .intro__button {
