@@ -221,8 +221,6 @@
   @include set-size(85px, 100px);
 
   @media (min-width: $tablet-width) {
-    position: absolute;
-
     @include set-size(160px, 170px);
   }
 }
@@ -231,8 +229,6 @@
   @include set-size(70px, 85px);
 
   @media (min-width: $tablet-width) {
-    position: absolute;
-
     @include set-size(170px, 210px);
   }
 }
