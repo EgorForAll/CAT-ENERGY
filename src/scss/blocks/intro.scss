@@ -84,30 +84,14 @@
   }
 }
 
-.intro__cup-container img {
-  @media (min-width: $tablet-width) {
-    display: none;
-  }
-}
-
 .intro__cup-container {
   @media (min-width: $tablet-width) {
     margin-top: -20px;
-
-    @include set-size(700px, 600px);
-    background-image: url("../../files/img/index-can-tablet 1.jpg");
-    background-size: 100%;
-    z-index: 1;
+    margin-bottom: 30px;
   }
 
   @media (min-width: $desktop-width) {
-    position: absolute;
-    left: 34%;
-    top: -8%;
-    background-image: url("../../files/img/index-can-desktop.png");
-    z-index: 5;
-
-    @include set-size(560px, 500px);
+    margin-bottom: -400px;
   }
 }
 
@@ -116,6 +100,19 @@
   z-index: 4;
   display: flex;
   margin: -100px auto 100px;
+
+  @include set-size(280px, 270px);
+
+  @media (min-width: $tablet-width) {
+    @include set-size(710px, 610px);
+    z-index: -1;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include set-size(550px, 500px);
+    transform: translate(65px, -255px);
+    z-index: 4;
+  }
 }
 
 .intro__button {
@@ -154,7 +151,7 @@
   @media (min-width: $desktop-width) {
     width: 250px;
     margin-left: 120px;
-    transform: translateY(120px);
+    transform: translateY(-60px);
   }
 }
 

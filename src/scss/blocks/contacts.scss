@@ -1,11 +1,6 @@
 .contacts {
   width: 100%;
   background-color: #f2f2f2;
-
-  @media (min-width: $desktop-width) {
-    min-height: 365px;
-    position: relative;
-  }
 }
 
 .contacts__title {
@@ -75,24 +70,35 @@
 
 .contacts__map {
   width: 100%;
-  min-height: 360px;
+  min-height: 320px;
   display: flex;
 
   background: url("../../files/img/location.jpg") no-repeat;
   background-size: 100%;
 
+  @media (min-width: $mobile-width) and (min-resolution: 2dppx) {
+    background: url("../../files/img/location@2x.jpg") no-repeat;
+    background-size: 100%;
+  }
+
   @media (min-width: $tablet-width) {
-    min-height: 400px;
     background: url("../../files/img/location-tablet.jpg") no-repeat;
     background-size: 100%;
   }
 
-  @media (min-width: $desktop-width) {
-    height: auto;
-    top: 0;
-    left: 0;
-    background: url("../../files/img/location-desktop.png") no-repeat;
+  @media (min-width: $tablet-width) and (min-resolution: 2dppx) {
+    background: url("../../files/img/location-tablet@2x.jpg") no-repeat;
     background-size: 100%;
-    z-index: 1;
+  }
+
+  @media (min-width: $desktop-width) {
+    background: url("../../files/img/location-desktop.jpg") no-repeat;
+    background-size: 100%;
+    z-index: 5;
+  }
+
+  @media (min-width: $desktop-width) and (min-resolution: 2dppx) {
+    background: url("../../files/img/location-desktop@2x.jpg") no-repeat;
+    background-size: 100%;
   }
 }

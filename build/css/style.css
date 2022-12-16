@@ -17,8 +17,9 @@
 
 .page-header__logo-image {
   margin-left: 20px;
+  margin-right: 10px;
   width: 33px;
-  height: 37px;
+  height: 38px;
 }
 
 .page-header__logo-title {
@@ -224,6 +225,8 @@
   z-index: 4;
   display: flex;
   margin: -100px auto 100px;
+  width: 280px;
+  height: 270px;
 }
 
 .intro__button {
@@ -600,8 +603,6 @@
   margin: 0 auto;
   width: 280px;
   height: 280px;
-  background: url("../../files/img/cat-mobile.png") no-repeat;
-  background-size: 100%;
 }
 
 .slider__bar {
@@ -699,7 +700,7 @@
 
 .contacts__map {
   width: 100%;
-  min-height: 360px;
+  min-height: 320px;
   display: flex;
   background: url("../../files/img/location.jpg") no-repeat;
   background-size: 100%;
@@ -1718,6 +1719,13 @@
   opacity: 0.3;
 }
 
+@media (min-width: 320px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 320px) and (min-resolution: 2dppx) {
+  .contacts__map {
+    background: url("../../files/img/location@2x.jpg") no-repeat;
+    background-size: 100%;
+  }
+}
+
 @media (min-width: 768px) {
   .page-header {
     display: flex;
@@ -1731,7 +1739,6 @@
   }
 
   .page-header__logo-image {
-    margin: 0;
     width: 60px;
     height: 50px;
   }
@@ -1798,17 +1805,15 @@
     z-index: 2;
   }
 
-  .intro__cup-container img {
-    display: none;
-  }
-
   .intro__cup-container {
     margin-top: -20px;
-    width: 700px;
-    height: 600px;
-    background-image: url("../../files/img/index-can-tablet 1.jpg");
-    background-size: 100%;
-    z-index: 1;
+    margin-bottom: 30px;
+  }
+
+  .intro__cup {
+    width: 710px;
+    height: 610px;
+    z-index: -1;
   }
 
   .intro__button {
@@ -2027,7 +2032,6 @@
     margin-top: -150px;
     width: 590px;
     height: 510px;
-    background: url("../../files/img/image_cat_slider.png") no-repeat;
   }
 
   .slider__subtitle {
@@ -2073,7 +2077,6 @@
   }
 
   .contacts__map {
-    min-height: 400px;
     background: url("../../files/img/location-tablet.jpg") no-repeat;
     background-size: 100%;
   }
@@ -2513,6 +2516,13 @@
   }
 }
 
+@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
+  .contacts__map {
+    background: url("../../files/img/location-tablet@2x.jpg") no-repeat;
+    background-size: 100%;
+  }
+}
+
 @media (min-width: 1240px) {
   .page-header {
     margin-top: 70px;
@@ -2571,19 +2581,20 @@
   }
 
   .intro__cup-container {
-    position: absolute;
-    left: 34%;
-    top: -8%;
-    background-image: url("../../files/img/index-can-desktop.png");
-    z-index: 5;
-    width: 560px;
+    margin-bottom: -400px;
+  }
+
+  .intro__cup {
+    width: 550px;
     height: 500px;
+    transform: translate(65px, -255px);
+    z-index: 4;
   }
 
   .intro__button {
     width: 250px;
     margin-left: 120px;
-    transform: translateY(120px);
+    transform: translateY(-60px);
   }
 
   .achievements-wrapper {
@@ -2727,11 +2738,6 @@
     margin-top: 0;
   }
 
-  .contacts {
-    min-height: 365px;
-    position: relative;
-  }
-
   .contacts__box {
     position: absolute;
     margin-left: 110px;
@@ -2749,12 +2755,9 @@
   }
 
   .contacts__map {
-    height: auto;
-    top: 0;
-    left: 0;
-    background: url("../../files/img/location-desktop.png") no-repeat;
+    background: url("../../files/img/location-desktop.jpg") no-repeat;
     background-size: 100%;
-    z-index: 1;
+    z-index: 5;
   }
 
   .form__title {
@@ -2979,7 +2982,7 @@
   .page-header::before {
     width: 720px;
     height: 700px;
-    background: url("../../files/img/index-background-desktop 1@2x.png") no-repeat;
+    background: url("../../files/img/index-background-desktop@2x.png") no-repeat;
     background-size: 100% 100%;
     z-index: 2;
   }
@@ -2987,5 +2990,10 @@
   .page-header::after {
     width: 717px;
     height: 692px;
+  }
+
+  .contacts__map {
+    background: url("../../files/img/location-desktop@2x.jpg") no-repeat;
+    background-size: 100%;
   }
 }

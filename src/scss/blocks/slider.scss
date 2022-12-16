@@ -19,14 +19,11 @@
   margin: 0 auto;
 
   @include set-size(280px, 280px);
-  background: url("../../files/img/cat-mobile.png") no-repeat;
-  background-size: 100%;
 
   @media (min-width: $tablet-width) {
     margin-top: -150px;
 
     @include set-size(590px, 510px);
-    background: url("../../files/img/image_cat_slider.png") no-repeat;
   }
 }
 
