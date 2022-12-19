@@ -1,4 +1,4 @@
-// Основной модуль 
+// Основной модуль
 import gulp from "gulp";
 
 // Импорт путей
@@ -10,7 +10,7 @@ import {plugins} from "./gulp/config/plugins.js";
 // Передаем значения в глобальную переменную
 
 global.app = {
-    path: path, 
+    path: path,
     gulp: gulp,
     plugins: plugins
 }
