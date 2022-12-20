@@ -45,13 +45,13 @@
       content: "";
       top: 0;
       right: 0;
-      background: url("../../files/img/index-background-intro.jpg") no-repeat;
+      background: url("../../files/img/index-background-intro.webp") no-repeat;
       background-size: 100%;
       z-index: 2;
 
       @media (min-resolution: 2dppx) {
         @include set-size(720px, 700px);
-        background: url("../../files/img/index-background-desktop@2x.png") no-repeat;
+        background: url("../../files/img/index-background-desktop@2x.webp") no-repeat;
         background-size: 100% 100%;
         z-index: 2;
       }
