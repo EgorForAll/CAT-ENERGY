@@ -169,7 +169,7 @@
   display: grid;
   padding: 25px 20px 30px;
   grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 20px 20px 10px min-content min-content min-content 20px 40px;
+  grid-template-rows: auto auto 10px min-content min-content min-content 20px 40px;
   gap: 0 0;
   grid-template-areas:
     "card__image card__image card__title card__title"

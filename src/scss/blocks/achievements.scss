@@ -22,40 +22,63 @@
 
   @media (min-width: $desktop-width) {
     flex-direction: row;
+    justify-content: space-between;
   }
 }
 
 .achievements__list-item {
-  position: relative;
   width: 100%;
   min-height: 265px;
-  box-sizing: border-box;
-  padding: 20px;
   margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 20px 12% 79% 20px;
+  grid-template-rows: 20px min-content 20px auto auto 20px;
+  gap: 0 0;
+  grid-template-areas:
+    ". . . ."
+    ". achievements__label achievements__list-title ."
+    ". . . ."
+    ". achievements__list-desc achievements__list-desc ."
+    ". achievements__list-link achievements__list-link ."
+    ". . . .";
 
   background-color: #f2f2f2;
   z-index: 1;
 
   @media (min-width: $tablet-width) {
-    padding: 40px;
-    margin-bottom: 30px;
-    min-height: 372px;
+    grid-template-columns: 40px 48% 40% 40px;
+    grid-template-rows: 80px auto 25px auto auto 50px;
+    gap: 0 0;
+    grid-template-areas:
+      ". . . ."
+      ". achievements__list-title achievements__label ."
+      ". . achievements__label ."
+      ". achievements__list-desc achievements__label ."
+      ". achievements__list-link achievements__label ."
+      ". . . .";
   }
 
   @media (min-width: $desktop-width) {
-    min-width: 530px;
-    margin-right: 50px;
-
-    &:nth-child(2) {
-      margin-right: 0;
-    }
+    max-width: 500px;
+    min-height: 375px;
+    display: grid;
+    grid-template-columns: 50px 130px 270px 50px;
+    grid-template-rows: 40px min-content 20px auto auto 50px;
+    gap: 0 0;
+    grid-template-areas:
+      ". . . ."
+      ". achievements__label achievements__list-title ."
+      ". . . ."
+      ". achievements__list-desc achievements__list-desc ."
+      ". achievements__list-link achievements__list-link ."
+      ". . . .";
   }
 }
 
 .achievements__list-title {
   position: relative;
+  grid-area: achievements__list-title;
   margin: 0;
-  margin-left: 30px;
 
   font-family: "Oswald", sans-serif;
   font-style: normal;
@@ -71,7 +94,6 @@
     font-size: 36px;
     line-height: 36px;
     order: 1;
-    width: 60%;
     text-align: start;
     margin-left: 0;
   }
@@ -80,6 +102,8 @@
     order: 2;
     display: flex;
     margin-left: 50px;
+    margin-top: auto;
+    margin-bottom: auto;
   }
 }
 
@@ -130,6 +154,9 @@
 
 .achievements__label {
   position: relative;
+  grid-area: achievements__label;
+  display: flex;
+  align-self: center;
 
   @include set-size(50px, 50px);
   border-radius: 50%;
@@ -138,24 +165,22 @@
 
   @media (min-width: $tablet-width) {
     display: flex;
-    margin-left: 5%;
+    justify-self: flex-end;
 
     @include set-size(200px, 200px);
-    transform: translateY(30px);
-    order: 2;
   }
 
   @media (min-width: $desktop-width) {
     order: 1;
 
     @include set-size(100px, 100px);
-    transform: translateY(0);
   }
 }
 
 .achievements__list-desc {
-  margin: 30px 0 15px;
-  padding-bottom: 23px;
+  grid-area: achievements__list-desc;
+  margin: 0;
+  padding-bottom: 10px;
 
   font-family: "Arial", sans-serif;
   font-style: normal;
@@ -167,9 +192,6 @@
   border-bottom: 1px solid #d9d9d9;
 
   @media (min-width: $tablet-width) {
-    width: 50%;
-    margin-top: -130px;
-    margin-bottom: 70px;
     font-size: 16px;
     line-height: 24px;
     border-bottom: none;
@@ -178,16 +200,17 @@
 
   @media (min-width: $desktop-width) {
     margin: 0;
-    margin-top: 40px;
-    margin-bottom: 25px;
-    width: auto;
+    width: 100%;
   }
 }
 
 .achievements__list-link {
   position: relative;
+  display: flex;
+  grid-area: achievements__list-link;
 
   margin: 0;
+  margin-top: 15px;
 
   font-family: "Oswald", sans-serif;
   font-style: normal;
@@ -203,8 +226,8 @@
 
   &::after {
     position: absolute;
-    top: 20%;
-    right: -48px;
+    top: 10px;
+    left: 120px;
 
     @include set-size(32px, 10px);
 
@@ -213,13 +236,23 @@
     background: url("../../files/img/arrow-link.png") no-repeat;
     background-size: 100%;
     z-index: 3;
+
+    @media (min-width: $tablet-width) {
+      top: 10px;
+      left: 120px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 10px;
+      left: 120px;
+    }
   }
 
   &:hover {
     &::after {
       position: absolute;
-      top: 20%;
-      right: -48px;
+      top: 10px;
+      left: 120px;
 
       @include set-size(32px, 10px);
 
@@ -228,6 +261,16 @@
       background: url("../../files/img/arrow-link-hover.svg") no-repeat;
       background-size: 100%;
       z-index: 3;
+
+      @media (min-width: $tablet-width) {
+        top: 10px;
+        left: 120px;
+      }
+
+      @media (min-width: $desktop-width) {
+        top: 10px;
+        left: 120px;
+      }
     }
   }
 

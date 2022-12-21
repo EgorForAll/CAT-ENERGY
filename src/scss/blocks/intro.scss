@@ -1,5 +1,5 @@
 .intro {
-  min-height: 452px;
+  min-height: 560px;
   position: relative;
   width: 100%;
 }
@@ -33,18 +33,16 @@
       position: relative;
     }
   }
-
-  @media (min-width: $desktop-width) {
-    margin-top: 100px;
-  }
 }
 
 .intro__title {
   font-family: "Oswald", sans-serif;
+  max-width: 250px;
   margin: 30px auto;
   color: #ffffff;
   text-transform: none;
   font-style: normal;
+  text-align: center;
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
@@ -53,7 +51,9 @@
   @media (min-width: $tablet-width) {
     margin-top: 60px;
     margin-left: 120px;
+    max-width: 430px;
     font-size: 60px;
+    text-align: left;
     line-height: 60px;
     color: #000000;
     z-index: 2;
@@ -61,6 +61,8 @@
 }
 
 .intro__subtitle {
+  max-width: 500px;
+  margin: 0 auto;
   font-family: "Oswald", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -82,6 +84,10 @@
     text-align: start;
     z-index: 2;
   }
+
+  @media (min-width: $desktop-width) {
+    max-width: 430px;
+  }
 }
 
 .intro__cup-container {
@@ -91,7 +97,9 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: -400px;
+    position: absolute;
+    margin: -170px 450px;
+    z-index: 4;
   }
 }
 
@@ -110,13 +118,15 @@
 
   @media (min-width: $desktop-width) {
     @include set-size(550px, 500px);
-    transform: translate(65px, -255px);
+    position: sticky;
     z-index: 4;
   }
 }
 
 .intro__button {
   display: flex;
+  padding: 15px 14px;
+  box-sizing: border-box;
   margin-top: -100px;
   margin-left: 20px;
   margin-right: 20px;
@@ -124,7 +134,6 @@
   flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
-  box-sizing: border-box;
 
   min-height: 54px;
 
@@ -151,7 +160,7 @@
   @media (min-width: $desktop-width) {
     width: 250px;
     margin-left: 120px;
-    transform: translateY(-60px);
+    transform: translateY(110px);
   }
 }
 

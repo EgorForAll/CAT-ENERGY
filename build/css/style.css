@@ -30,6 +30,7 @@
 .main-nav {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   flex-direction: column;
   z-index: 4;
@@ -168,7 +169,7 @@
 }
 
 .intro {
-  min-height: 452px;
+  min-height: 560px;
   position: relative;
   width: 100%;
 }
@@ -198,10 +199,12 @@
 
 .intro__title {
   font-family: "Oswald", sans-serif;
+  max-width: 250px;
   margin: 30px auto;
   color: #ffffff;
   text-transform: none;
   font-style: normal;
+  text-align: center;
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
@@ -209,6 +212,8 @@
 }
 
 .intro__subtitle {
+  max-width: 500px;
+  margin: 0 auto;
   font-family: "Oswald", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -231,6 +236,8 @@
 
 .intro__button {
   display: flex;
+  padding: 15px 14px;
+  box-sizing: border-box;
   margin-top: -100px;
   margin-left: 20px;
   margin-right: 20px;
@@ -238,7 +245,6 @@
   flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
-  box-sizing: border-box;
   min-height: 54px;
   text-decoration: none;
   background: #68b738;
@@ -286,20 +292,24 @@
 }
 
 .achievements__list-item {
-  position: relative;
   width: 100%;
   min-height: 265px;
-  box-sizing: border-box;
-  padding: 20px;
   margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 20px 12% 79% 20px;
+  grid-template-rows: 20px min-content 20px auto auto 20px;
+  gap: 0 0;
+  grid-template-areas: ". . . ." ". achievements__label achievements__list-title ." ". . . ." ". achievements__list-desc achievements__list-desc ." ". achievements__list-link achievements__list-link ." ". . . .";
   background-color: #f2f2f2;
   z-index: 1;
 }
 
 .achievements__list-title {
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;
   position: relative;
+  grid-area: achievements__list-title;
   margin: 0;
-  margin-left: 30px;
   font-family: "Oswald", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -339,7 +349,12 @@
 }
 
 .achievements__label {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
   position: relative;
+  grid-area: achievements__label;
+  display: flex;
+  align-self: center;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -348,8 +363,12 @@
 }
 
 .achievements__list-desc {
-  margin: 30px 0 15px;
-  padding-bottom: 23px;
+  -ms-grid-row: 7;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 3;
+  grid-area: achievements__list-desc;
+  margin: 0;
+  padding-bottom: 10px;
   font-family: "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -360,8 +379,14 @@
 }
 
 .achievements__list-link {
+  -ms-grid-row: 9;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 3;
   position: relative;
+  display: flex;
+  grid-area: achievements__list-link;
   margin: 0;
+  margin-top: 15px;
   font-family: "Oswald", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -375,8 +400,8 @@
 
 .achievements__list-link::after {
   position: absolute;
-  top: 20%;
-  right: -48px;
+  top: 10px;
+  left: 120px;
   width: 32px;
   height: 10px;
   content: "";
@@ -387,8 +412,8 @@
 
 .achievements__list-link:hover::after {
   position: absolute;
-  top: 20%;
-  right: -48px;
+  top: 10px;
+  left: 120px;
   width: 32px;
   height: 10px;
   content: "";
@@ -422,7 +447,6 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
-  justify-content: space-between;
   flex-direction: column;
 }
 
@@ -430,7 +454,6 @@
   position: relative;
   display: flex;
   width: 100%;
-  min-height: 60px;
   margin-bottom: 20px;
   font-family: "Arial", sans-serif;
   font-style: normal;
@@ -566,6 +589,7 @@
 
 .results__desc {
   width: 80px;
+  max-height: 30px;
   position: absolute;
   transform: translate(-20px, 37px);
   font-family: "Arial", sans-serif;
@@ -760,23 +784,8 @@
   justify-content: center;
 }
 
-.page-footer__list-item:nth-child(1) .page-footer__icon {
-  width: 23px;
-  height: 16px;
-}
-
-.page-footer__list-item:nth-child(2) .page-footer__icon {
-  width: 16px;
-  height: 16px;
-}
-
-.page-footer__list-item:nth-child(3) {
+.page-footer__list-item:last-child {
   margin-right: 0;
-}
-
-.page-footer__list-item:nth-child(3) .page-footer__icon {
-  width: 10px;
-  height: 18px;
 }
 
 .page-footer__icon {
@@ -1293,7 +1302,7 @@
   display: grid;
   padding: 25px 20px 30px;
   grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 20px 20px 10px min-content min-content min-content 20px 40px;
+  grid-template-rows: auto auto 10px min-content min-content min-content 20px 40px;
   gap: 0 0;
   grid-template-areas: "card__image card__image card__title card__title" "card__image card__image card__title card__title" "card__image card__image . ." "card__image card__image card__mass-option card__mass-option" "card__image card__image card__test-option card__test-option" "card__image card__image card__price-option card__price-option" ". . . ." "card__button card__button card__button card__button";
   border-top: 1px solid #ebebeb;
@@ -1748,8 +1757,9 @@
   }
 
   .main-nav {
-    width: 62%;
+    max-width: 500px;
     margin-right: 30px;
+    margin-left: auto;
   }
 
   .page-header__toggle--closed {
@@ -1763,22 +1773,25 @@
   .main-nav__list {
     flex-direction: row;
     justify-content: flex-end;
+    flex-wrap: wrap;
   }
 
   .main-nav__list-item {
     border: none;
     padding: 0;
     margin-right: 35px;
+    margin-bottom: 10px;
   }
 
   .main-nav__link {
     font-size: 18px;
     line-height: 24px;
+    margin-bottom: 10px;
   }
 
   .main-nav__link--active {
-    padding-bottom: 10px;
-    border-bottom: 2px solid #ffffff;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #68b738;
   }
 
   .intro__block {
@@ -1792,7 +1805,9 @@
   .intro__title {
     margin-top: 60px;
     margin-left: 120px;
+    max-width: 430px;
     font-size: 60px;
+    text-align: left;
     line-height: 60px;
     color: #000000;
     z-index: 2;
@@ -1834,16 +1849,16 @@
   }
 
   .achievements__list-item {
-    padding: 40px;
-    margin-bottom: 30px;
-    min-height: 372px;
+    grid-template-columns: 40px 48% 40% 40px;
+    grid-template-rows: 80px auto 25px auto auto 50px;
+    gap: 0 0;
+    grid-template-areas: ". . . ." ". achievements__list-title achievements__label ." ". . achievements__label ." ". achievements__list-desc achievements__label ." ". achievements__list-link achievements__label ." ". . . .";
   }
 
   .achievements__list-title {
     font-size: 36px;
     line-height: 36px;
     order: 1;
-    width: 60%;
     text-align: start;
     margin-left: 0;
   }
@@ -1860,21 +1875,26 @@
 
   .achievements__label {
     display: flex;
-    margin-left: 5%;
+    justify-self: flex-end;
     width: 200px;
     height: 200px;
-    transform: translateY(30px);
-    order: 2;
   }
 
   .achievements__list-desc {
-    width: 50%;
-    margin-top: -130px;
-    margin-bottom: 70px;
     font-size: 16px;
     line-height: 24px;
     border-bottom: none;
     padding-bottom: 0;
+  }
+
+  .achievements__list-link::after {
+    top: 10px;
+    left: 120px;
+  }
+
+  .achievements__list-link:hover::after {
+    top: 10px;
+    left: 120px;
   }
 
   .description {
@@ -1889,9 +1909,9 @@
   }
 
   .description__title {
-    width: 375px;
+    max-width: 700px;
     margin: 20px 0 40px;
-    text-align: center;
+    text-align: start;
     font-size: 60px;
     line-height: 60px;
   }
@@ -1901,69 +1921,34 @@
     width: 660px;
     display: grid;
     grid-template-columns: repeat(2, 230px);
-    justify-content: flex-start;
     -moz-column-gap: 150px;
          column-gap: 150px;
   }
 
-  .description-list__item:nth-child(1) {
+  .description-list__item {
     width: 230px;
-    min-height: 280px;
+    min-height: 250px;
     flex-direction: column;
   }
 
-  .description-list__item:nth-child(1)::after {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    content: "";
-    background: url("../../files/img/1.svg") no-repeat;
-    background-position: 90% 0;
+  .description-list__item:nth-child(1) {
+    background: url("../../files/img/2.svg") no-repeat;
+    background-position: 98%;
   }
 
   .description-list__item:nth-child(2) {
-    width: 230px;
-    min-height: 280px;
-    flex-direction: column;
-  }
-
-  .description-list__item:nth-child(2)::after {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    content: "";
     background: url("../../files/img/2.svg") no-repeat;
-    background-position: 90% 0;
+    background-position: 98%;
   }
 
   .description-list__item:nth-child(3) {
-    width: 230px;
-    min-height: 280px;
-    flex-direction: column;
-  }
-
-  .description-list__item:nth-child(3)::after {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    content: "";
     background: url("../../files/img/3.svg") no-repeat;
-    background-position: 90% 0;
+    background-position: 98%;
   }
 
   .description-list__item:nth-child(4) {
-    width: 230px;
-    min-height: 280px;
-    flex-direction: column;
-  }
-
-  .description-list__item:nth-child(4)::after {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    content: "";
     background: url("../../files/img/4.svg") no-repeat;
-    background-position: 90% 0;
+    background-position: 98%;
   }
 
   .description-list__label {
@@ -2109,21 +2094,7 @@
 
   .page-footer__social-list {
     border-bottom: none;
-  }
-
-  .page-footer__list-item:nth-child(1) .page-footer__icon {
-    width: 29px;
-    height: 23px;
-  }
-
-  .page-footer__list-item:nth-child(2) .page-footer__icon {
-    width: 23px;
-    height: 23px;
-  }
-
-  .page-footer__list-item:nth-child(3) .page-footer__icon {
-    width: 15px;
-    height: 23px;
+    max-width: 400px;
   }
 
   .page-footer__logo-title {
@@ -2416,6 +2387,29 @@
     border-bottom: 2px solid #68b738;
   }
 
+  .achievements__list-title {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+
+  .achievements__label {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 7;
+    -ms-grid-column: 5;
+  }
+
+  .achievements__list-desc {
+    -ms-grid-row: 7;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+  }
+
+  .achievements__list-link {
+    -ms-grid-row: 9;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+  }
+
   .card__image {
     -ms-grid-row: 1;
     -ms-grid-row-span: 7;
@@ -2577,31 +2571,44 @@
     height: 21px;
   }
 
+  .main-nav {
+    max-width: 580px;
+    margin-right: 30px;
+    margin-left: auto;
+  }
+
   .main-nav__link {
     font-size: 20px;
     line-height: 30px;
     color: #ffffff;
   }
 
-  .intro__block {
-    margin-top: 100px;
+  .main-nav__link--active {
+    padding-bottom: 5px;
+    border-bottom: 2px solid #ffffff;
+  }
+
+  .intro__subtitle {
+    max-width: 430px;
   }
 
   .intro__cup-container {
-    margin-bottom: -400px;
+    position: absolute;
+    margin: -170px 450px;
+    z-index: 4;
   }
 
   .intro__cup {
     width: 550px;
     height: 500px;
-    transform: translate(65px, -255px);
+    position: sticky;
     z-index: 4;
   }
 
   .intro__button {
     width: 250px;
     margin-left: 120px;
-    transform: translateY(-60px);
+    transform: translateY(110px);
   }
 
   .achievements-wrapper {
@@ -2613,21 +2620,25 @@
 
   .achievements__list {
     flex-direction: row;
+    justify-content: space-between;
   }
 
   .achievements__list-item {
-    min-width: 530px;
-    margin-right: 50px;
-  }
-
-  .achievements__list-item:nth-child(2) {
-    margin-right: 0;
+    max-width: 500px;
+    min-height: 375px;
+    display: grid;
+    grid-template-columns: 50px 130px 270px 50px;
+    grid-template-rows: 40px min-content 20px auto auto 50px;
+    gap: 0 0;
+    grid-template-areas: ". . . ." ". achievements__label achievements__list-title ." ". . . ." ". achievements__list-desc achievements__list-desc ." ". achievements__list-link achievements__list-link ." ". . . .";
   }
 
   .achievements__list-title {
     order: 2;
     display: flex;
     margin-left: 50px;
+    margin-top: auto;
+    margin-bottom: auto;
   }
 
   .achievements__list-item:first-child .achievements__label::after {
@@ -2644,14 +2655,21 @@
     order: 1;
     width: 100px;
     height: 100px;
-    transform: translateY(0);
   }
 
   .achievements__list-desc {
     margin: 0;
-    margin-top: 40px;
-    margin-bottom: 25px;
-    width: auto;
+    width: 100%;
+  }
+
+  .achievements__list-link::after {
+    top: 10px;
+    left: 120px;
+  }
+
+  .achievements__list-link:hover::after {
+    top: 10px;
+    left: 120px;
   }
 
   .description {
@@ -2729,6 +2747,7 @@
 
   .results__resolution {
     margin: 0;
+    margin-top: 30px;
     width: 100%;
     text-align: start;
     font-size: 20px;
@@ -2750,7 +2769,7 @@
     margin-left: 110px;
     margin-top: 95px;
     width: 565px;
-    height: 200px;
+    min-height: 200px;
     z-index: 2;
     background-color: #ffffff;
   }
@@ -2946,6 +2965,29 @@
     font-size: 20px;
     line-height: 30px;
     color: #000000;
+  }
+
+  .achievements__list-title {
+    -ms-grid-row: 3;
+    -ms-grid-column: 5;
+  }
+
+  .achievements__label {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 3;
+  }
+
+  .achievements__list-desc {
+    -ms-grid-row: 7;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 3;
+  }
+
+  .achievements__list-link {
+    -ms-grid-row: 9;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 3;
   }
 
   .extragoods__title {
