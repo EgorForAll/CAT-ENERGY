@@ -58,9 +58,9 @@
 .catalog__card:last-child {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 20px 20px 10px min-content 10px min-content 20px 40px;
+  grid-template-rows: 20px 20px 10px min-content 10px min-content 40px auto;
   gap: 0 0;
-  margin-bottom: 25px;
+  margin-bottom: 100px;
   grid-template-areas:
     "card__image card__image card__image card__image"
     "card__image card__image card__image card__image"
@@ -79,8 +79,10 @@
   }
 
   .card__button {
+    min-height: 40px;
     color: #444444;
     background-color: #f2f2f2;
+    transform: translateY(60px);
 
     &:hover {
       background-color: #ebebeb;
@@ -126,7 +128,7 @@
     display: flex;
     justify-content: center;
     text-align: center;
-    height: 19px;
+    min-height: 20px;
     border: none;
   }
 
@@ -142,24 +144,24 @@
 
   @media (min-width: $tablet-width) {
     display: grid;
-    margin-top: 100px;
-    min-height: 379px;
-    margin-bottom: 0;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 10px 20px 40px 40px min-content min-content min-content min-content min-content 57px 40px;
+    margin-top: 150px;
+    margin-bottom: 50px;
+    min-height: 370px;
+    padding: 0;
+    box-sizing: border-box;
+    grid-template-columns: 25px 20% 20% 20% 20% 25px;
+    grid-template-rows: 10px 20px 40px 40px min-content min-content min-content 40px 40px 40px;
     gap: 0 0;
     grid-template-areas:
-      "card__image card__image card__image card__image"
-      "card__image card__image card__image card__image"
-      "card__image card__image card__image card__image"
-      "card__image card__image card__image card__image"
-      "card__title card__title card__title card__title"
-      "card__title card__title card__title card__title"
-      "card__test-option card__test-option card__test-option card__test-option"
-      "card__mass-option card__mass-option card__mass-option card__mass-option"
-      "card__price-option card__price-option card__price-option card__price-option"
-      ". . . ."
-      "card__button card__button card__button card__button";
+      ". card__image card__image card__image card__image ."
+      ". card__image card__image card__image card__image ."
+      ". card__image card__image card__image card__image ."
+      ". card__image card__image card__image card__image ."
+      ". card__title card__title card__title card__title ."
+      ". card__title card__title card__title card__title ."
+      ". card__test-option card__test-option card__test-option card__test-option ."
+      ". . . . . ."
+      ". card__button card__button card__button card__button .";
     border: 2px solid #f2f2f2;
   }
 }
@@ -167,6 +169,7 @@
 .catalog__card {
   position: relative;
   display: grid;
+  margin-bottom: 50px;
   padding: 25px 20px 30px;
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: auto auto 10px min-content min-content min-content 20px 40px;
@@ -185,22 +188,26 @@
 
   @media (min-width: $tablet-width) {
     display: grid;
-    margin-top: 100px;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 10px 20px 40px 40px min-content min-content min-content min-content min-content 40px 40px;
+    margin-top: 150px;
+    margin-bottom: 50px;
+    min-height: 370px;
+    padding: 0;
+    box-sizing: border-box;
+    grid-template-columns: 25px 20% 20% 20% 20% 25px;
+    grid-template-rows: 10px 20px 40px 40px min-content min-content min-content min-content min-content 40px auto 40px;
     gap: 0 0;
     grid-template-areas:
-      "card__image card__image card__image card__image"
-      "card__image card__image card__image card__image"
-      "card__image card__image card__image card__image"
-      "card__image card__image card__image card__image"
-      "card__title card__title card__title card__title"
-      "card__title card__title card__title card__title"
-      "card__mass-option card__mass-option card__mass-option card__mass-option"
-      "card__test-option card__test-option card__test-option card__test-option"
-      "card__price-option card__price-option card__price-option card__price-option"
-      ". . . ."
-      "card__button card__button card__button card__button";
+      ". card__image card__image card__image card__image ."
+      ". card__image card__image card__image card__image ."
+      ". card__image card__image card__image card__image ."
+      ". card__image card__image card__image card__image ."
+      ". card__title card__title card__title card__title ."
+      ". card__title card__title card__title card__title ."
+      ". card__mass-option card__mass-option card__mass-option card__mass-option ."
+      ". card__test-option card__test-option card__test-option card__test-option ."
+      ". card__price-option card__price-option card__price-option card__price-option ."
+      ". . . . . ."
+      ". card__button card__button card__button card__button .";
     background-color: #f2f2f2;
   }
 }
@@ -276,6 +283,15 @@
   }
 }
 
+.mass-option__char {
+  width: 50px;
+  text-align: start;
+
+  @media (min-width: $tablet-width) {
+    width: 100px;
+  }
+}
+
 .card__test-option {
   grid-area: card__test-option;
 
@@ -297,6 +313,15 @@
     padding: 10px 0;
 
     border-bottom: 1px solid #cdcdcd;
+  }
+}
+
+.test-option__char {
+  width: 50px;
+  text-align: start;
+
+  @media (min-width: $tablet-width) {
+    width: 100px;
   }
 }
 
@@ -324,8 +349,18 @@
   }
 }
 
+.price-option__char {
+  width: 50px;
+  text-align: start;
+
+  @media (min-width: $tablet-width) {
+    width: 100px;
+  }
+}
+
 .card__button {
   grid-area: card__button;
+  min-height: 40px;
 
   font-family: "Oswald", sans-serif;
   font-style: normal;
