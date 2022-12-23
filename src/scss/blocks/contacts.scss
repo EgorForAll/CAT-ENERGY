@@ -35,6 +35,7 @@
 
   @media (min-width: $desktop-width) {
     position: absolute;
+    box-sizing: border-box;
     margin-left: 110px;
     margin-top: 95px;
     width: 565px;
