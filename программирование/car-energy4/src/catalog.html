@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',
+{"title": "Каталог продукции"}
+)
+<body class="page-body">
+@@include('html/sprite.svg',{})
+@@include('html/header-catalog.html')
+  <main class="catalog-main">
+    <h1 class="catalog__title">Каталог продукции</h1>
+
+    <section class="catalog__list">
+
+      <h2 class="visually-hidden">Cписок товаров</h2>
+
+        <div class="catalog__card">
+
+          <div class="card__image">
+            <picture>
+              <source media="(min-width: 1240)" srcset="files/img/catalog-images/chicken_500-desktop.png, files/img/catalog-images/chicken_500-desktop@2x.png 2x">
+              <source media="(min-width: 1240)" srcset="files/img/catalog-images/chicken_500-desktop.webp, files/img/catalog-images/chicken_500-desktop@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 768px)" srcset="files/img/catalog-images/chicken_500-tablet.png, files/img/catalog-images/chicken_500-tablet@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="files/img/catalog-images/chicken_500-tablet.webp, files/img/catalog-images/chicken_500-tablet@2x.webp 2x" type="image/webp">
+              <source src="files/img/catalog-images/chicken_500.webp, files/img/catalog-images/chicken_500@2x.webp 2x" type="image/webp">
+              <img class="card__image-set" src="files/img/catalog-images/chicken_500.png" srcset="files/img/catalog-images/chicken_500@2x.png" alt="Упаковка 500г со вкусом курицы">
+            </picture>
+          </div>
+          <div class="card__title">
+            <span>Cat Energy PRO <br> 500 г</span>
+          </div>
+          <div class="card__mass-option">
+            <span class="mass-option__char">Масса</span>
+            <span>500 г</span>
+          </div>
+          <div class="card__test-option">
+            <span class="test-option__char">Вкус</span>
+            <span>Курица</span>
+          </div>
+          <div class="card__price-option">
+            <span class="price-option__char">Цена</span>
+            <span>700 Р.</span>
+          </div>
+          <button class="card__button">Заказать</button>
+
+        </div>
+        <!-- catalog__card -->
+
+        <div class="catalog__card">
+
+          <div class="card__image">
+            <picture>
+              <source media="(min-width: 1240px)" srcset="files/img/catalog-images/chicken1000-desktop.png, files/img/catalog-images/checken_1000-desktop@2x.png 2x">
+              <source media="(min-width: 1240px)" srcset="files/img/catalog-images/chicken1000-desktop.webp, files/img/catalog-images/checken_1000-desktop@2x.webp 2x" type="webp">
+              <source media="(min-width: 768px)" srcset="files/img/catalog-images/checken_1000-tablet.png, files/img/catalog-images/checken_1000-tablet@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="files/img/catalog-images/checken_1000-tablet.webp, files/img/catalog-images/checken_1000-tablet@2x.webp 2x" type="webp">
+              <source srcset="files/img/catalog-images/chicken__1000.webp, files/img/catalog-images/chicken_1000@2x.webp 2x" type="webp">
+              <img class="card__image-set" src="files/img/catalog-images/chicken__1000.png" srcset="files/img/catalog-images/chicken_1000@2x.png 2x" alt="Упаковка 1000г со вкусом курицы">
+            </picture>
+          </div>
+          <div class="card__title">
+            <span>Cat Energy PRO <br> 1000 г</span>
+          </div>
+          <div class="card__mass-option">
+            <span class="mass-option__char">Масса</span>
+            <span>1000 г</span>
+          </div>
+          <div class="card__test-option">
+            <span class="test-option__char">Вкус</span>
+            <span>Курица</span>
+          </div>
+          <div class="card__price-option">
+            <span class="price-option__char">Цена</span>
+            <span>1000 Р.</span>
+          </div>
+          <button class="card__button">Заказать</button>
+
+        </div>
+        <!-- catalog__card -->
+
+        <div class="catalog__card">
+
+          <div class="card__image">
+            <picture>
+              <source media="(min-width: 768px)" srcset="files/img/catalog-images/fish_500-tablet.png, files/img/catalog-images/fish_500-tablet@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="files/img/catalog-images/fish_500-tablet.webp, files/img/catalog-images/fish_500-tablet@2x.webp 2x">
+              <source srcset="files/img/catalog-images/fish_500.webp, files/img/catalog-images/fish_500@2x.webp 2x" type="image/webp">
+              <img class="card__image-set" src="files/img/catalog-images/fish_500.png" srcset="files/img/catalog-images/fish_500@2x.png 2x" width="160" height="170" alt="Упаковка 500г со вкусом рыбы">
+            </picture>
+          </div>
+          <div class="card__title">
+            <span>Cat Energy PRO <br> 500 г</span>
+          </div>
+          <div class="card__mass-option">
+            <span class="mass-option__char">Масса</span>
+            <span>500 г</span>
+          </div>
+          <div class="card__test-option">
+            <span class="test-option__char">Вкус</span>
+            <span>Рыба</span>
+          </div>
+          <div class="card__price-option">
+            <span class="price-option__char">Цена</span>
+            <span>700 Р.</span>
+          </div>
+          <button class="card__button">Заказать</button>
+
+        </div>
+        <!-- catalog__card -->
+
+        <div class="catalog__card">
+
+          <div class="card__image">
+            <picture>
+              <source media="(min-width: 768px)" srcset="files/img/catalog-images/fish_1000-tablet.png, files/img/catalog-images/fish_1000-tablet@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="files/img/catalog-images/fish_1000-tablet.webp, files/img/catalog-images/fish_1000-tablet@2x.webp 2x" type="image/webp">
+              <source srcset="files/img/catalog-images/fish_1000.webp, files/img/catalog-images/fish_1000@2x.webp 2x" type="webp">
+              <img class="card__image-set" src="files/img/catalog-images/fish_1000.png" srcset="files/img/catalog-images/fish_1000@2x.png 2x" width="170" height="200" alt="Упаковка 1000г со вкусом рыбы">
+            </picture>
+          </div>
+          <div class="card__title">
+            <span>Cat Energy PRO <br> 1000 г</span>
+          </div>
+          <div class="card__mass-option">
+            <span class="mass-option__char">Масса</span>
+            <span>1000 г</span>
+          </div>
+          <div class="card__test-option">
+            <span class="test-option__char">Вкус</span>
+            <span>Рыба</span>
+          </div>
+          <div class="card__price-option">
+            <span class="price-option__char">Цена</span>
+            <span>1000 Р.</span>
+          </div>
+          <button class="card__button">Заказать</button>
+
+        </div>
+        <!-- catalog__card -->
+
+        <div class="catalog__card">
+
+          <div class="card__image">
+            <source media="(min-width: 768px)" srcset="files/img/catalog-images/buckwheat_500-tablet.png, files/img/catalog-images/buckwheat_500-tablet@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="files/img/catalog-images/buckwheat_500-tablet.webp, files/img/catalog-images/buckwheat_500-tablet@2x.webp 2x" type="image/webp">
+            <source srcset="files/img/catalog-images/buckwheat_500.webp, files/img/catalog-images/buckwheat_500@2x.webp 2x" type="image/webp">
+            <img class="card__image-set" src="files/img/catalog-images/buckwheat_500.png" srcset="files/img/catalog-images/buckwheat_500@2x.png 2x" width="160" height="170" alt="Упаковка 500г со вкусом гречки">
+          </div>
+          <div class="card__title">
+            <span>Cat Energy Slim <br> 500 г</span>
+          </div>
+          <div class="card__mass-option">
+            <span class="mass-option__char">Масса</span>
+            <span>500 г</span>
+          </div>
+          <div class="card__test-option">
+            <span class="test-option__char">Вкус</span>
+            <span>Гречка</span>
+          </div>
+          <div class="card__price-option">
+            <span class="price-option__char">Цена</span>
+            <span>400 Р.</span>
+          </div>
+          <button class="card__button">Заказать</button>
+
+        </div>
+        <!-- catalog__card -->
+
+        <div class="catalog__card">
+
+          <div class="card__image">
+            <source media="(min-width: 768px)" srcset="files/img/catalog-images/buckwheat_1000-tablet.png, files/img/catalog-images/buckwheat_1000-tablet@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="files/img/catalog-images/buckwheat_1000-tablet.webp, files/img/catalog-images/buckwheat_1000-tablet@2x.webp 2x" type="image/webp">
+            <source srcset="iles/img/catalog-images/buckwheat_1000.webp, files/img/catalog-images/buckwheat_1000@2x.webp 2x" type="image/webp">
+            <img class="card__image-set" src="files/img/catalog-images/buckwheat_1000.png" srcset="files/img/catalog-images/buckwheat_1000@2x.png 2x" width="170" height="200" alt="Упаковка 1000г со вкусом гречки">
+          </div>
+          <div class="card__title">
+            <span>Cat Energy Slim <br> 1000 г</span>
+          </div>
+          <div class="card__mass-option">
+            <span class="mass-option__char">Масса</span>
+            <span>1000 г</span>
+          </div>
+          <div class="card__test-option">
+            <span class="test-option__char">Вкус</span>
+            <span>Гречка</span>
+          </div>
+          <div class="card__price-option">
+            <span class="price-option__char">Цена</span>
+            <span>700 Р.</span>
+          </div>
+          <button class="card__button">Заказать</button>
+
+        </div>
+        <!-- catalog__card -->
+
+        <div class="catalog__card">
+
+          <div class="card__image">
+          <picture>
+            <source media="(min-width: 768px)" srcset="files/img/catalog-images/rice_500-tablet.png, files/img/catalog-images/rice_500-tablet@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="files/img/catalog-images/rice_500-tablet.webp, files/img/catalog-images/rice_500-tablet@2x.webp 2x" type="image/webp">
+            <source srcset="files/img/catalog-images/rice_500.webp, files/img/catalog-images/rice_500@2x.webp 2x" type="webp">
+            <img class="card__image-set" src="files/img/catalog-images/rice_500.png" srcset="files/img/catalog-images/rice_500@2x.png 2x" width="160" height="180" alt="Упаковка 500г со вкусом риса">
+          </picture>
+          </div>
+          <div class="card__title">
+            <span>Cat Energy Slim <br> 500 г</span>
+          </div>
+          <div class="card__mass-option">
+            <span class="mass-option__char">Масса</span>
+            <span>500 г</span>
+          </div>
+          <div class="card__test-option">
+            <span class="test-option__char">Вкус</span>
+            <span>Рис</span>
+          </div>
+          <div class="card__price-option">
+            <span class="price-option__char">Цена</span>
+            <span>500 Р.</span>
+          </div>
+          <button class="card__button">Заказать</button>
+
+        </div>
+
+        <!-- catalog__card -->
+
+        <div class="catalog__card">
+
+          <div class="card__image">
+          </div>
+          <div class="card__title">
+            <span>Показать еще <br> 100500 товаров</span>
+          </div>
+          <div class="card__test-option">
+            <span>На самом деле вкусов гораздо больше!</span>
+          </div>
+          <button class="card__button">Показать всё</button>
+
+        </div>
+        <!-- catalog__card -->
+
+    </section>
+
+    <section class="extragoods">
+        <form class="extragoods__form">
+          <fieldset class="extragoods__fieldset">
+            <legend class="extragoods__legend">
+              <h2 class="extragoods__fieldset-title">Дополнительные товары</h2>
+            </legend>
+            <ul class="extragoods__list">
+              <li class="extragoods__item">
+                <span class="extragoods__title">Сахарозаменитель</span>
+                <span class="extragoods__volume">1 упаковка (100г)</span>
+                <span class="extragoods__price">200 Р.</span>
+                <button class="extragoods__button" type="submit">Заказать</button>
+              </li>
+              <li class="extragoods__item">
+                <span class="extragoods__title">Питьевая вода</span>
+                <span class="extragoods__volume">5 литров</span>
+                <span class="extragoods__price">50 Р.</span>
+                <button class="extragoods__button" type="submit">Заказать</button>
+              </li>
+              <li class="extragoods__item">
+                <span class="extragoods__title">Молоко</span>
+                <span class="extragoods__volume">1 литр</span>
+                <span class="extragoods__price">100 Р.</span>
+                <button class="extragoods__button" type="submit">Заказать</button>
+              </li>
+              <li class="extragoods__item">
+                <span class="extragoods__title">Витамины</span>
+                <span class="extragoods__volume">1 упаковка (30г)</span>
+                <span class="extragoods__price">300 Р.</span>
+                <button class="extragoods__button" type="submit">Заказать</button>
+              </li>
+            </ul>
+              <div class="gift">
+                <div class="gift__overlay">
+                  <a class="gift__link" href="#">
+                    <span class="gift__text">Закажите все <br> и получите чехол для <br> кота в подарок!</span>
+                  </a>
+                </div>
+              </div>
+          </fieldset>
+        </form>
+        <!-- catalog__extragoods-form -->
+
+    </section>
+    <section class="catalog__contacts">
+      <h2 class="visually-hidden">Как с нами связаться</h2>
+
+      <div class="contacts__box contacts__box--box">
+
+        <p class="contacts__title contacts__title--catalog">Приглашаем <br>
+        к сотрудничеству <br>
+        дилеров!</p>
+        <address class="contacts__adress contacts__adress--catalog">
+          <p class="contacts__street">ул. Большая
+          Конюшенная, д. 19/8</p>
+          <p class="contacts__city">Санкт-Петербург</p>
+        </address>
+
+      </div>
+
+      <div class="contacts__map">
+
+      </div>
+    </section>
+  </main>
+@@include('html/footer.html')
+
+<script src="files/scripts/script.min.js"></script>
+</body>
+</html>

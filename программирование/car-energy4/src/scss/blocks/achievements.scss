@@ -1,0 +1,280 @@
+.achievements-wrapper {
+  @include margin-wrapper();
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    @include margin-wrapper($margin-left: 30px, $margin-right: 30px,);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include margin-wrapper($margin-left: 110px, $margin-right: 110px, $margin-top: 70px);
+  }
+}
+
+.achievements__list {
+  @include set-list();
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.achievements__list-item {
+  width: 100%;
+  min-height: 265px;
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 20px 12% 79% 20px;
+  grid-template-rows: 20px min-content 20px auto auto 20px;
+  gap: 0 0;
+  grid-template-areas:
+    ". . . ."
+    ". achievements__label achievements__list-title ."
+    ". . . ."
+    ". achievements__list-desc achievements__list-desc ."
+    ". achievements__list-link achievements__list-link ."
+    ". . . .";
+
+  background-color: #f2f2f2;
+  z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 40px 48% 40% 40px;
+    grid-template-rows: 80px auto 25px auto auto 50px;
+    gap: 0 0;
+    grid-template-areas:
+      ". . . ."
+      ". achievements__list-title achievements__label ."
+      ". . achievements__label ."
+      ". achievements__list-desc achievements__label ."
+      ". achievements__list-link achievements__label ."
+      ". . . .";
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 500px;
+    min-height: 375px;
+    display: grid;
+    grid-template-columns: 50px 130px 270px 50px;
+    grid-template-rows: 40px min-content 20px auto auto 50px;
+    gap: 0 0;
+    grid-template-areas:
+      ". . . ."
+      ". achievements__label achievements__list-title ."
+      ". . . ."
+      ". achievements__list-desc achievements__list-desc ."
+      ". achievements__list-link achievements__list-link ."
+      ". . . .";
+  }
+}
+
+.achievements__list-title {
+  position: relative;
+  grid-area: achievements__list-title;
+  margin: 0;
+
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: uppercase;
+  text-align: center;
+
+  color: #000000;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    order: 1;
+    text-align: start;
+    margin-left: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    order: 2;
+    display: flex;
+    margin-left: 50px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
+.achievements__list-item:first-child .achievements__label::after {
+  position: absolute;
+  top: 0;
+  left: 14%;
+
+  @include set-size(35px, 50px);
+  background: url("../../files/img/cat-label.svg") no-repeat;
+  background-size: 100%;
+  z-index: 2;
+  content: "";
+
+  @media (min-width: $tablet-width) {
+    @include set-size(140px, 195px);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include set-size(70px, 95px);
+  }
+}
+
+.achievements__list-item:nth-child(2) .achievements__label::after {
+  position: absolute;
+  top: 22%;
+  left: -19%;
+
+  @include set-size(69px, 56px);
+
+  content: "";
+  background: url("../../files/img/tiger-label.svg") no-repeat;
+  background-size: 100%;
+  z-index: 2;
+
+  @media (min-width: $tablet-width) {
+    @include set-size(270px, 110px);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include set-size(134px, 56px);
+  }
+}
+
+.achievements__title-box {
+  display: flex;
+}
+
+.achievements__label {
+  position: relative;
+  grid-area: achievements__label;
+  display: flex;
+  align-self: center;
+
+  @include set-size(50px, 50px);
+  border-radius: 50%;
+  background-color: #68b738;
+  z-index: 2;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-self: flex-end;
+
+    @include set-size(200px, 200px);
+  }
+
+  @media (min-width: $desktop-width) {
+    order: 1;
+
+    @include set-size(100px, 100px);
+  }
+}
+
+.achievements__list-desc {
+  grid-area: achievements__list-desc;
+  margin: 0;
+  padding-bottom: 10px;
+
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+
+  color: #444444;
+  border-bottom: 1px solid #d9d9d9;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    width: 100%;
+  }
+}
+
+.achievements__list-link {
+  position: relative;
+  display: flex;
+  grid-area: achievements__list-link;
+
+  margin: 0;
+  margin-top: 15px;
+
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  color: #000000;
+
+  &::after {
+    position: absolute;
+    top: 10px;
+    left: 120px;
+
+    @include set-size(32px, 10px);
+
+    content: "";
+
+    background: url("../../files/img/arrow-link.png") no-repeat;
+    background-size: 100%;
+    z-index: 3;
+
+    @media (min-width: $tablet-width) {
+      top: 10px;
+      left: 120px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 10px;
+      left: 120px;
+    }
+  }
+
+  &:hover {
+    &::after {
+      position: absolute;
+      top: 10px;
+      left: 120px;
+
+      @include set-size(32px, 10px);
+
+      content: "";
+
+      background: url("../../files/img/arrow-link-hover.svg") no-repeat;
+      background-size: 100%;
+      z-index: 3;
+
+      @media (min-width: $tablet-width) {
+        top: 10px;
+        left: 120px;
+      }
+
+      @media (min-width: $desktop-width) {
+        top: 10px;
+        left: 120px;
+      }
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
